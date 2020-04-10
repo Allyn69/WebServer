@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ *  styles.css
+ *  for WiFiDisk and FTP On The Go 
+ *
+ *  By Peter Burford for WiFi Disk and FTP On The Go 
+ *  Copyright 2009 Headlight Software, Inc. All rights reserved.
+ *
+ * The styles are designed to look good in Safari on an iPhone. 
+ * Looking much like the WiFiDisk file browser.
+*/
+
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	margin: 5px 1px 1px 1px;
+}
+
+a, a:visited, a:active {
+	color: #333;
+	text-decoration:none;
+}
+
+#header {
+}
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 12pt;
+}
+
+#header h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 8pt;
+}
+
+/* PB: Results Styles */
+
+#filestable {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#filestable td {
+	padding: .3em .3em .3em .3em;
+}
+
+#filestable .titlerow td {
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+
+#filestable .stdrow1 td {
+	background-color:#FFF;
+	border-bottom: 1px solid #ccc;
+}
+
+.desctitle {
+	text-align:left;
+	font-size:10pt;
+}
+
+.sizetitle {
+	text-align:right;
+	font-size:10pt;
+}
+
+.desc {
+	text-align:left;
+	font-size:16pt;
+}
+
+.size, .size a {
+	text-align:right;
+	font-size:10pt;
+	color:#00f;
+}
+
+.bluelink {
+	color:#00f;
+	text-decoration:underline;
+}
+
+#filestable td.view {
+	text-align:center;
+	width:32px;
+	padding: 0;
+}
+
+#filestable img {
+	padding: 1px;
+	border:none;
+}

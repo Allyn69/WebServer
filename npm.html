@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    
+    <meta charset="UTF-8">
+    
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
+
+    
+        <title> Manage your JavaScript in private registries | Bytesafe</title>
+    
+
+    
+
+    
+    
+        <meta name="description" content="Secure your JavaScript supply chain with Bytesafe! Free private npm registry">
+    
+
+   
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/bytesafeicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/bytesafeicon-16x16.png">
+    
+
+    <meta name="msapplication-TileColor" content="#fa7070">
+    <meta name="theme-color" content="#fa7070">
+
+    
+    <link rel="stylesheet" href="/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/dependencies/swiper/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="/dependencies/wow/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/dependencies/magnific-popup/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/dependencies/components-elegant-icons/css/elegant-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/dependencies/simple-line-icons/css/simple-line-icons.css" type="text/css">
+
+    
+    <script src="https://kit.fontawesome.com/a13429fd0d.js" crossorigin="anonymous"></script>
+
+    
+    
+    
+    <link rel="stylesheet" href="/sass/app.e0e9e48ab7e260579ef90454c05186eee58431b20747c115fa7c294d8b7a74b7.css"  integrity="sha256-4OnkirfiYFee&#43;QRUwFGG7uWEMbIHR8EV&#43;nwpTYt6dLc=" media="screen" type="text/css">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Play|Poppins:300,400,500,600,700,800|Source+Code+Pro" rel="stylesheet">
+
+    
+
+    <meta property="og:title" content="Manage your JavaScript in private registries" />
+<meta property="og:description" content="Secure your JavaScript supply chain with Bytesafe! Free private npm registry" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bytesafe.dev/npm/" />
+<meta property="og:image" content="https://bytesafe.dev/opengraph/default_image.png" />
+
+<meta itemprop="name" content="Manage your JavaScript in private registries">
+<meta itemprop="description" content="Secure your JavaScript supply chain with Bytesafe! Free private npm registry">
+
+<meta itemprop="wordCount" content="6">
+<meta itemprop="image" content="https://bytesafe.dev/opengraph/default_image.png">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bytesafe.dev/opengraph/default_image.png"/>
+
+<meta name="twitter:title" content="Manage your JavaScript in private registries"/>
+<meta name="twitter:description" content="Secure your JavaScript supply chain with Bytesafe! Free private npm registry"/>
+<link rel="canonical" href="https://bytesafe.dev/npm/">
+
+    
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-156576045-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        <script type="text/javascript">
+    window._chatlio = window._chatlio||[];
+    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page", "open", "showOrHide"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+        n.setAttribute('data-widget-id','0e5f0290-54df-42db-5680-a7891ce7c691');
+        c.parentNode.insertBefore(n,c);
+    }();
+</script>
+    
+</head>
+
+<body id="home-version-1" class="home-version-4" data-style="default">
+
+
+
+
+<header class="site-header header_trans-fixed  " data-top="992">
+    <div class="container">
+        <div class="header-inner">
+            <div class="toggle-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+
+            <div class="site-mobile-logo">
+                <a href="/" class="logo">
+                    <span>bytesafe</span>
+                </a>
+            </div>
+
+            <nav class="site-nav ">
+                <div class="close-menu">
+                    <span>Close</span>
+                    <i class="ei ei-icon_close"></i>
+                </div>
+
+                <div class="site-logo">
+                    <a href="/" class="logo">
+                        
+                            <span class="main-logo light-logo">bytesafe</span>
+                            <span class="sticky-logo dark-logo">bytesafe</span>
+                        
+                    </a>
+                </div>
+                
+
+                <div class="menu-wrapper" data-top="992">
+                    <ul class="site-main-menu">
+                        <li><a href="/" title="Bytesafe Home">Home</a></li>
+                        <li><a href="/posts/" title="Bytesafe Blog">Blog</a></li>
+                        <li><a href="https://login.bytesafe.dev" title="Login to Bytesafe">Login</a></li>
+
+
+                    </ul>
+
+                    <div class="nav-right">
+                        <a href="https://login.bytesafe.dev/signup" class="nav-btn" title="Sign up to Bytesafe">Sign Up</a>
+                    </div>
+                </div>
+                
+
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<a href="#main_content" data-type="section-switch" class="return-to-top">
+    <i class="fa fa-chevron-up"></i>
+</a>
+
+<div class="page-loader">
+    <div class="loader">
+        
+        <div class="blobs">
+            <div class="blob-center"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+
+    </div>
+</div>
+
+<div id="main_content">
+
+    
+
+
+<section class="banner banner-one">
+    <div class="circle-shape" data-parallax='{"y" : 230}'><img src="/media/banner/circle-shape.png" alt="circle"></div>
+    <div class="container">
+        <div class="banner-content-wrap">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <h1 class="banner-title wow pixFadeUp" data-wow-delay="0.3s">
+                            Free private npm registry
+                        </h1>
+
+                        <p class="description wow pixFadeUp" data-wow-delay="0.5s">
+                            Secure your javascript supply chain today
+                        </p>
+
+                        <a href="https://login.bytesafe.dev/signup" class="pxs-btn banner-btn wow pixFadeUp" data-wow-delay="0.6s" title="Sign Up - It&#39;s Free!">Sign Up - It&#39;s Free!</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-mockup wow pixFadeLeft">
+                        <img src="/media/banner/macbook-console-packages.png" alt="bytesafe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-shape">
+        <img src="/media/banner/shape-bg2560.png" alt="bg2560">
+    </div>
+</section>
+
+
+    
+
+
+<section class="featured">
+    <div class="container">
+        <div class="section-title text-center wow pixFade">
+            <h3 class="sub-title">Using Bytesafe as your private npm registry</h3>
+            <h2 class="title">Benefits</h2>
+        </div>
+
+        <div class="row">
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Secure</h3>
+                        <p>Control packages and versions available to your organization</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Compatible</h3>
+                        <p>Run npm as normal. No custom client. No impact on the development process</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-cloud"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Hosted</h3>
+                        <p>No need to setup own infrastructure</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-user-lock"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Private</h3>
+                        <p>Access management to ensure only authorized users have access</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-database"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Resilient</h3>
+                        <p>Running in AWS with data stored in DynamoDB and S3 to ensure maximum availability</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div style="text-align: center" class="col-md-4">
+                <div class="saaspik-icon-box-wrapper wow pixFadeLeft" data-wow-delay="0.3s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 500%" class="fas fa-circle-notch"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">Agile</h3>
+                        <p>Adaptable to your workflow. Snapshot registries for each sprint</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</section>
+
+    
+
+
+<section class="banner banner-one">
+    <div class="circle-shape" data-parallax='{"y" : 230}'><img src="/media/banner/circle-shape.png" alt="circle"></div>
+    <div class="container">
+        <div class="banner-content-wrap">
+            <div class="row align-items-center">
+                <div class="col-lg-5 align-self-end">
+                    <div class="banner-content">
+                        <h2 class="banner-title wow pixFadeUp" data-wow-delay="0.3s">
+                            Safe haven for your JavaScript
+                        </h2>
+
+                        <p class="description wow pixFadeUp" data-wow-delay="0.5s">
+                            Take control of what packages and versions are used by your team with hosted private npm registries. Manage both your own and third party code. You can have multiple private registries, each with its own selection of upstreams.
+                        </p>
+
+                        <div class="row">
+                            <a href="https://login.bytesafe.dev/signup" class="pxs-btn banner-btn wow pixFadeUp" data-wow-delay="0.6s" title="Get started now!">Get started now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 offset-lg-2">
+                    <div class="promo-mockup wow pixFadeLeft">
+                        <img src="/media/feature/console-pkg-react.png" alt="mockup">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-shape">
+        <img src="/media/banner/shape-bg2560.png" alt="bg2560">
+    </div>
+</section>
+
+
+    
+
+
+<section class="genera-informes">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pix-order-one">
+                <div class="section-title style-two">
+                    <h2 class="title wow pixFadeUp">
+                        Quick and easy setup
+                    </h2>
+
+                    <p class="wow pixFadeUp" data-wow-delay="0.3s">
+                        Get started with your own registry in minutes! 
+                    </p>
+                </div>
+
+                <ul class="list-items wow pixFadeUp" data-wow-delay="0.4s">
+                    
+
+                    <li>Create your account &amp; admin user</li>
+
+                    
+
+                    <li>Configure your Bytesafe registry and upstreams</li>
+
+                    
+
+                    <li>Invite your team members</li>
+
+                    
+
+                    <li>Work with your regular tools</li>
+
+                    
+                </ul>
+
+                <a href="https://login.bytesafe.dev/signup" class="pix-btn btn-outline wow pixFadeUp" data-wow-delay="0.5s" title="Sign Up - It&#39;s Free!">Sign Up - It&#39;s Free!</a>
+            </div>
+
+
+            <div class="informes-feature-image">
+                <div class="image-one" data-parallax='{"y" : 20}'>
+                    <img src="/media/feature/createaccount.png" style="border-radius: 10px" class="wow pixFadeDown" alt="informes">
+                </div>
+
+                <div class="image-two" data-parallax='{"y" : -20}'>
+                    <img src="/media/feature/terminal-login.png" style="border-radius: 10px" class=" mw-none wow pixFadeDown" data-wow-delay="0.3s" alt="informes">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="shape-bg">
+        <img src="/media/background/shape.png" class="wow fadeInRight" alt="shape-bg">
+    </div>
+</section>
+
+
+    
+
+
+
+<section style="background-color: #fdf8f8" class="call-to-action-premise">
+    
+    <div class="container">
+        <div class="action-content text-center wow pixFadeUp">
+            <div class="row">
+                <div class="col">
+                    <h5 class="title">
+                        Need On-Premise hosting? 
+                    </h5>
+                </div>
+                <div class="col">
+                    <a href="mailto:sales@bytesafe.dev" class="pix-btn" title="Let&#39;s talk">Let&#39;s talk</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <div class="scroll-circle">
+        <img src="/media/background/circle13.png" data-parallax='{"y" : -130}' alt="circle">
+    </div>
+    
+</section>
+
+
+
+    
+
+
+<section class="featured-two">
+    <div id="features" class="container">
+        <div class="section-title text-center">
+            <h3 class="sub-title wow pixFadeUp">Bytesafe</h3>
+            <h2 class="title wow pixFadeUp" data-wow-delay="0.2s">Features</h2>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-project-diagram"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">MULTIPLE REGISTRIES</h3>
+                        <p>
+                            Create multiple registries. Configure registries, policies and plugins to fit your workflow
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-code-branch"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">MULTIPLE UPSTREAMS</h3>
+                        <p>
+                            Connect multiple upstream registries, both private and public (like registry.npmjs.org)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-door-closed"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">PRIVATE PACKAGES</h3>
+                        <p>
+                            Push packages into a private registry and share them with your team without having to make them public
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-stream"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">PATCH PUBLIC PACKAGES</h3>
+                        <p>
+                            Push own version of a public package with the same name and version into your private registry
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-chevron-square-up"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">PUSH</h3>
+                        <p>
+                            Push a package from one registry to an upstream registry
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-chevron-square-down"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">PULL</h3>
+                        <p>
+                            Pull package from one or more upstream registries
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-clone"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">CLONE REGISTRY</h3>
+                        <p>
+                            Copy an existing private registry, and all its contents, into a newly created one with a simple click
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-browser"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">CONSOLE</h3>
+                        <p>
+                            Use the web console to visualize and manage your registries, upstreams and packages
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="saaspik-icon-box-wrapper style-two wow pixFadeRight" data-wow-delay="0.4s">
+                    <div class="saaspik-icon-box-icon">
+                        <i style="font-size: 250%;color: #fa7070" class="fal fa-terminal"></i>
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                        <h3 class="pixsass-icon-box-title">CLI</h3>
+                        <p>
+                            Live on the command line? All important actions on registries and packages are available in the Bytesafe CLI
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</section>
+
+
+        <div class="scroll-circle wow pixFadeLeft">
+            <img src="../media/background/circle8.png" data-parallax='{"y" : 130}' alt="circle">
+        </div>
+    </section>
+
+    
+
+
+
+<section class="call-to-action">
+    <div class="overlay-bg"><img src="/media/background/ellipse.png" alt="bg"></div>
+    <div class="container">
+        <div class="action-content text-center wow pixFadeUp">
+            <h2 class="title">
+                Enterprise features
+            </h2>
+
+            <div>
+                <p>
+                    Free, hosted and reliable npm registries is only the start. Bytesafe&#39;s vision is to provide support for the whole code supply chain, supporting internal and remote teams of developers with infrastructure for collaboration and as a trusted partner for identifying compliance issues or vulnerabilities in third-party dependencies. Support for more ecosystems besides JavaScript are coming, as well as support for SAML, Auditing and Custom Integration.
+                </p>
+                <p>
+                    
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>License compliance</h3>
+                </div>
+                <div class="col">
+
+                    <h3>Security scanning</h3>
+                </div>
+                <div class="col">
+                    <h3>Access management</h3>
+                </div>
+            </div>
+
+
+            <a href="mailto:sales@bytesafe.dev" style="margin-top: 50px" class="pix-btn btn-light" title="Learn More">Learn More</a>
+        </div>
+        
+    </div>
+    
+
+    <div class="scroll-circle">
+        <img src="/media/background/circle13.png" data-parallax='{"y" : -130}' alt="circle">
+    </div>
+    
+</section>
+
+
+
+</div>
+
+
+
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="footer-inner wow pixFadeUp">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget-title">Company</h3>
+
+                        <ul class="footer-menu">
+                            <li><a href="/#features" title="Bytesafe Features">Features</a></li>
+                            
+                           
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget-title">Resources</h3>
+
+                        <ul class="footer-menu">
+
+
+
+                            <li><a href="/posts/" title="Bytesafe Blog">Blog</a></li>
+                            <li><a href="/tags/using-bytesafe/" title="Blog posts how to use Bytesafe">Using Bytesafe</a></li>
+                            <li><a href="/updates/" title="Recent updates to Bytesafe">Recent Updates</a></li>
+                        </ul>
+
+
+                    </div>
+                    
+                </div>
+                
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget-title">Our Address</h3>
+                        <p>
+                            Drottninggatan 97, <nobr>113 60</nobr> Stockholm, Sweden
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget-title">Social</h3>
+                        <ul class="footer-social-link">
+                            <li><a href=https://www.facebook.com/bytesafedev target="_blank" rel="noreferrer" title="Bytesafe on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=https://twitter.com/bytesafedev target="_blank" rel="noreferrer" title="Bytesafe on Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=https://www.linkedin.com/showcase/bytesafe target="_blank" rel="noreferrer" title="Bytesafe on LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+            
+
+        </div>
+
+        <div class="site-info">
+            <div class="copyright">
+                <p>© Copyright 2020 <a href="https://www.bitfront.se" target="_blank" rel="noreferrer" title="Bitfront Homepage">Bitfront AB</a>, all rights reserved </p>
+            </div>
+
+            <ul class="site-info-menu">
+                <li><a href="/privacy/" title="Bytesafe Privacy Policy">Privacy Policy </a></li>
+                
+                <li><a href="/terms/" title="Bytesafe Terms of Service">Terms of Service </a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="/dependencies/popper.js/popper.min.js"></script>
+<script src="/dependencies/jquery/jquery.min.js"></script>
+<script src="/dependencies/bootstrap/js/bootstrap.min.js"></script>
+<script src="/dependencies/swiper/js/swiper.min.js"></script>
+<script src="/dependencies/jquery.appear/jquery.appear.js"></script>
+<script src="/dependencies/wow/js/wow.min.js"></script>
+<script src="/dependencies/countUp.js/countUp.min.js"></script>
+<script src="/dependencies/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/dependencies/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/dependencies/jquery.parallax-scroll/js/jquery.parallax-scroll.js"></script>
+<script src="/dependencies/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+
+
+
+
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>

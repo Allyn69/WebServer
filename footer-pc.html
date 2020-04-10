@@ -1,0 +1,53 @@
+</table>
+</div>
+<div id="upload" class="hidden">
+  <form enctype="multipart/form-data" name="user" action="**PATH**" method="post">
+    <div id="tabletitle">Files</div>
+    <!-- This is where the output will appear -->
+    <div id="files_list"></div>
+    <!-- This is the form -->
+    <div class="uploadfile" id="addfile">
+      <input id="my_file_element" type="file" name="File1"  />
+    </div>
+    <input id="uploadbutton" type="submit" value="Upload All Files" name="submit" class="uploadbutton" />
+  </form>
+  <script>
+	<!-- Create an instance of the multiSelector class, pass it the output target and the max number of files -->
+	var multi_selector = new MultiSelector( document.getElementById( 'files_list' ), 20 );
+	<!-- Pass in the file element -->
+	multi_selector.addElement( document.getElementById( 'my_file_element' ) );
+</script>
+</div>
+</div>
+<div class="smallinfo"> Switch to <a href="**PATH**?simple=yes">iPhone optimized page</a>. </div>
+<br />
+<a href="http://www.**APPURL**.com/" class="bluelink">&copy; **APPURL**.com</a>
+<div id="helpwindow" class="hidden" onclick="hidehelp();return false;">
+  <div id="helpwindow-body" onclick="return false;">
+    <h2>**APPNAME** Web Access</h2>
+    <p><b>View &amp; Download Files</b><br />
+      Navigate files stored on your iPhone or iPod touch with **APPNAME**. <br />
+      <img src="image_doc.png" alt="Image" /><img src="plain_doc.png" alt="Document" /> Clicking on an icon or filename will view or download that file.<br />
+      <img src="dir.png" alt="Directory" /> Clicking on a directory navigates to it.<br />
+      <img src="left-arrow24.png" alt="Up Directory" /> Clicking this arrow will back up a directory.<br />
+      Files and directories can not be renamed or deleted using web access.<br />
+    </p>
+    <p><b>Upload Files</b><br />
+      Upload files to the current **APPNAME** directory.<br />
+      Click the
+      <input type="button" Value="Browse..." disabled />
+      or
+      <input type="button" Value="Choose File" disabled />
+      button to add a file.<br />
+      Up to 20 files can be queued for upload.<br />
+      Files are uploaded when the
+      <input type="button" Value="Upload All Files" disabled />
+      button is pressed--not when they are added to the upload queue.  Be sure to upload your list!<br />
+      <em>NOTE:  Navigating to a new directory or viewing a file will clear the upload queue!</em><br />
+    </p>
+    <p><b>iPhone Optimized Page</b><br />
+      A simpler version of this web access page designed for an iPhone or iPod touch. </p>
+    <a href="#" onclick="hidehelp();return false;" class="helplink">(Close this window)</a> <br />
+  </div>
+</div>
+</body></html>
