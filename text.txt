@@ -1,3 +1,42 @@
-usage
-
-TL;DR, add a .gitkeep file to your empty directory
+compiler.cpp:1:10: error: too many decimal points in number
+    1 | certifi==2018.4.16
+      |          ^~~~~~~~~
+compiler.cpp:2:10: error: too many decimal points in number
+    2 | chardet==3.0.4
+      |          ^~~~~
+compiler.cpp:4:11: error: too many decimal points in number
+    4 | oauthlib==2.0.7
+      |           ^~~~~
+compiler.cpp:5:7: error: too many decimal points in number
+    5 | pika==0.11.2
+      |       ^~~~~~
+compiler.cpp:6:8: error: too many decimal points in number
+    6 | pyaml==19.4.1
+      |        ^~~~~~
+compiler.cpp:7:10: error: too many decimal points in number
+    7 | PySocks==1.6.8
+      |          ^~~~~
+compiler.cpp:9:20: error: too many decimal points in number
+    9 | requests-oauthlib==0.8.0
+      |                    ^~~~~
+compiler.cpp:10:6: error: too many decimal points in number
+   10 | six==1.11.0
+      |      ^~~~~~
+compiler.cpp:11:9: error: too many decimal points in number
+   11 | tweepy==3.6.0
+      |         ^~~~~
+compiler.cpp:12:21: error: too many decimal points in number
+   12 | tweet-preprocessor==0.5.0
+      |                     ^~~~~
+compiler.cpp:13:10: error: too many decimal points in number
+   13 | urllib3>=1.24.2
+      |          ^~~~~~
+compiler.cpp:17:8: error: too many decimal points in number
+   17 | numpy>=1.14.6
+      |        ^~~~~~
+compiler.cpp:22:8: error: too many decimal points in number
+   22 | mxnet>=1.4.0
+      |        ^~~~~
+compiler.cpp:1:1: error: 'certifi' does not name a type
+    1 | certifi==2018.4.16
+      | ^~~~~~~
