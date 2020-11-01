@@ -1,0 +1,1115 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"32edb8f179",applicationID:"436723953"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="id" content="228681" />
+<meta name="date" content="2019-12-13T17:39:13" />
+<link rel="shortcut icon" href="/themes/custom/secgov/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.sec.gov/edgar/filer-information/current-edgar-filer-manual" />
+<link rel="shortlink" href="https://www.sec.gov/node/228681" />
+<link rel="revision" href="https://www.sec.gov/edgar/filer-information/current-edgar-filer-manual" />
+<script src="/files/google_tag/primary/google_tag.script.js?qj49c1" defer></script>
+
+    <meta name="origin" content="Drupal" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=3.0" />
+    <title>SEC.gov | Current EDGAR Filer Manual (Volumes I - II)</title>
+    <script>window.env = "production";</script>
+    <link rel="stylesheet" media="all" href="/files/css/css_AXrSuBCrtXZSSPMh2em7CLKPwwafkOVygydg77IcALw.css" />
+<link rel="stylesheet" media="all" href="/files/css/css_xqX1HtlL9oBqCTQnCj32KynwENS2JjSah6Vz-fQWlpU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/files/js/js_jGRrOVtA308fAjhEW-RnlJSLvhEIfKXkx8pdlCYS_Zw.js"></script>
+
+  </head>
+  <body class="ie-view path-node node--type-landing-page">
+
+    <a href="#main-content" class="visually-hidden focusable" tabindex="1">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD3BKV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<container>
+<div id="page-wrapper">
+  <div id="page"  class="landing-page">
+    <section role="header">
+      <div class="header-content">
+        <div id="global-header">
+    
+<div id="block-digitalgovsearch" class="block global-header-digitalgov-search">
+  
+    
+        <div class="body"><!--<div class="hide-for-small" id="global-search">
+<form accept-charset="UTF-8" action="//secsearch.sec.gov/search" class="clearfix" id="global-search-form" method="get" name="form_iQueryForm">
+<fieldset><legend></legend> <label class="overlabel" for="global-search-box" style="visibility: visible;">Search SEC.gov</label> <input name="utf8" type="hidden" value="?" /> <input class="affiliate" name="affiliate" type="hidden" value="secsearch" /> <input aria-autocomplete="list" aria-haspopup="true" autocomplete="off" class="usagov-search-autocomplete ui-autocomplete-input" id="global-search-box" name="query" role="textbox" tabindex="4" title="Search for" type="text" /> <span aria-hidden="true" class="button-label fa fa-search"> </span><input class="global-search-button" tabindex="5" title="Go" type="submit" value="" /></fieldset>
+</form>
+
+<p class="options"><a class="option-link" href="http://www.sec.gov/edgar/searchedgar/companysearch.html" tabindex="6">Company Filings</a> | <a class="option-link" href="http://www.sec.gov/search/search.htm" tabindex="7">More Search Options</a></p>
+</div>-->
+
+
+
+<div class="block block--search block--search-form" id="global-search" role="search">
+<form accept-charset="UTF-8" action="//secsearch.sec.gov/search" class="clearfix" id="global-search-form" method="get" name="form_iQueryForm">
+<fieldset><legend></legend>
+<div class="search-box-container"><label class="overlabel" for="global-search-box" style="visibility: visible;">Search SEC.gov</label> <input name="utf8" type="hidden" value="?" /> <input class="affiliate" name="affiliate" type="hidden" value="secsearch" /> <input aria-autocomplete="list" aria-haspopup="true" autocomplete="off" class="usagov-search-autocomplete ui-autocomplete-input" id="global-search-box" name="query" role="textbox" title="Search for" type="text" /> <span aria-hidden="true" class="button-label fa fa-search"> </span> <input class="global-search-button" title="Go" type="submit" value="" /></div>
+</fieldset>
+</form>
+
+<div class="menu-name-menu-utility-menu">
+<p class="options"><span><a class="option-link" href="http://www.sec.gov/edgar/searchedgar/companysearch.html">Company Filings</a></span><span><a class="option-link" href="http://www.sec.gov/search/search.htm">More Search Options</a></span></p>
+</div>
+</div></div>
+  </div>
+<div id="block-secgov-branding" class="site-branding block region__inner system_branding_block">
+  <div class="block--menu-block" role="navigation">
+    <div class="menu-block-wrapper menu-name-main-menu">
+      
+            
+      
+    <div class="banner-seal">
+    <a href="/" title="SEC Emblem" rel="home" tabindex="2">
+      <img src="/files/sec-logo.png" alt="SEC Emblem" />
+    </a>
+  </div>
+  
+    <div class="banner-org-name">
+      <a href="/" title="U.S. Securities and Exchange Commission" rel="home" tabindex="3">U.S. Securities and Exchange Commission</a>
+  </div>
+   
+
+    <div id="mobile-menu-toggle" class="is-closed">
+    <span class="svg-icon svg-icon-sm" aria-label="Menu Toggle">q</span>
+  </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+
+      </div>
+      
+      <div class="global-navigation" id="global-navigation">
+        
+        <div class="desktop-menu">
+            <div class="navigation-wrapper">
+    <div id="block-secgov-main-menu" class="block region__inner main">
+  <div class="block--menu-block" role="navigation">
+    <div class="menu-block-wrapper menu-name-main-menu">
+      
+            
+          
+    
+              <ul id="home-menu" class="menu">
+                          <li class="menu__item is-expanded expanded" >
+                <a href="/about.shtml" title="About" class="menu__link">About</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/careers" title="Careers" class="menu__link">Careers</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/Article/about-commissioners.html" title="Commissioners" class="menu__link">Commissioners</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/contact-information/sec-directory" title="Contact" class="menu__link">Contact</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/reports" title="Reports and Publications" class="menu__link">Reports and Publications</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/answers/about-lawsshtml.html" title="Securities Laws" class="menu__link">Securities Laws</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/about/what-we-do" title="What We Do" class="menu__link">What We Do</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="/divisions.shtml" title="Divisions &amp; Offices" class="menu__link">Divisions &amp; Offices</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/corpfin.shtml" title="Corporation Finance" class="menu__link">Corporation Finance</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/enforce.shtml" title="Enforcement" class="menu__link">Enforcement</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/investment" title="Investment Management" class="menu__link">Investment Management</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/riskfin.shtml" title="Economic and Risk Analysis" class="menu__link">Economic and Risk Analysis</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/marketreg.shtml" title="Trading and Markets" class="menu__link">Trading and Markets</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/alj" title="Office of Administrative Law Judges" class="menu__link">Office of Administrative Law Judges</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/about/offices/ocie.shtml" title="Office of Compliance Inspections and Examinations" class="menu__link">Office of Compliance Inspections and Examinations</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/page/sec-regional-offices" title="Regional Offices" class="menu__link">Regional Offices</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions.shtml" title="All Divisions and Offices" class="menu__link">All Divisions and Offices</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="https://www.sec.gov/litigation.shtml" title="Enforcement" class="menu__link">Enforcement</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/litigation/litreleases.shtml" title="Litigation Releases" class="menu__link">Litigation Releases</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/litigation/admin.shtml" title="Administrative Proceedings" class="menu__link">Administrative Proceedings</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/litigation/opinions.shtml" title="Opinions and Adjudicatory Orders" class="menu__link">Opinions and Adjudicatory Orders</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/enforce/friactions.shtml" title="Accounting and Auditing" class="menu__link">Accounting and Auditing</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/litigation/suspensions.shtml" title="Trading Suspensions" class="menu__link">Trading Suspensions</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/newsroom/howinvestigationswork.html" title="How Investigations Work" class="menu__link">How Investigations Work</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/divisions/enforce/receiverships.htm" title="Receiverships" class="menu__link">Receiverships</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.sec.gov/divisions/enforce/claims.htm" title="Information for Harmed Investors" class="menu__link">Information for Harmed Investors</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="/rules.shtml" title="Regulation" class="menu__link">Regulation</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/rulemaking-index.shtml" title="Rulemaking Index" class="menu__link">Rulemaking Index</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/proposed.shtml" title="Proposed Rules" class="menu__link">Proposed Rules</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/final.shtml" title="Final Rules" class="menu__link">Final Rules</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/interim-final-temp.shtml" title="Interim Final Temporary Rules" class="menu__link">Interim Final Temporary Rules</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/other.shtml" title="Other Orders and Notices" class="menu__link">Other Orders and Notices</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/rules/sro.shtml" title="Self-Regulatory Organizations" class="menu__link">Self-Regulatory Organizations</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/interps.shtml" title="Staff Interpretations" class="menu__link">Staff Interpretations</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="/education" title="Education" class="menu__link">Education</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/" title="Investor.gov" class="menu__link">Investor.gov</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/research-before-you-invest/research/five-questions-ask-before-you-invest" title="Five Questions to Ask Before You Invest" class="menu__link">Five Questions to Ask Before You Invest</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/investment-professionals" title="About Investment Professionals" class="menu__link">About Investment Professionals</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/check-your-investment-professional" title="Check Your Investment Professional" class="menu__link">Check Your Investment Professional</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/additional-resources/free-financial-planning-tools" title="Investing Tools and Calculators" class="menu__link">Investing Tools and Calculators</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/introduction-investing/basics/investment-products" title="Investment Products" class="menu__link">Investment Products</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/research-before-you-invest/research/understanding-fees" title="Understanding Fees" class="menu__link">Understanding Fees</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/additional-resources/news-alerts/alerts-bulletins" title="Investor Alerts and Bulletins" class="menu__link">Investor Alerts and Bulletins</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.investor.gov/additional-resources/general-resources/glossary" title="Glossary" class="menu__link">Glossary</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="/edgar.shtml" title="Filings" class="menu__link">Filings</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/edgar/search-and-access" title="EDGAR – Search &amp; Access" class="menu__link">EDGAR – Search &amp; Access</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/edgar/filer-information" title="EDGAR – Information for Filers" class="menu__link">EDGAR – Information for Filers</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/edgar/searchedgar/companysearch.html" title="Company Filing Search" class="menu__link">Company Filing Search</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/oiea/Article/edgarguide.html" title="How to Search EDGAR" class="menu__link">How to Search EDGAR</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/fast-answers/answerspublicdocshtm.html" title="Requesting Public Documents" class="menu__link">Requesting Public Documents</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/forms" title="Forms List" class="menu__link">Forms List</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/edgar/about" title="About EDGAR" class="menu__link">About EDGAR</a>
+              </li>
+        </ul>
+  
+              </li>
+                    <li class="menu__item is-expanded expanded" >
+                <a href="/news" title="News" class="menu__link">News</a>
+                                <ul class="menu">
+                          <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/pressreleases" title="Press Releases" class="menu__link">Press Releases</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/statements" title="Public Statements" class="menu__link">Public Statements</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/speeches" title="Speeches" class="menu__link">Speeches</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/testimony" title="Testimony" class="menu__link">Testimony</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/spotlight" title="Spotlight Topics" class="menu__link">Spotlight Topics</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/whatsnew/wn-today.shtml" title="What&#039;s New" class="menu__link">What&#039;s New</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/upcoming-events" title="Upcoming Events" class="menu__link">Upcoming Events</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="https://www.sec.gov/news/webcasts.htm" title="Webcasts" class="menu__link">Webcasts</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/sec-in-the-news" title="SEC in the News" class="menu__link">SEC in the News</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/sec-videos" title="SEC Videos" class="menu__link">SEC Videos</a>
+              </li>
+                    <li class="menu__item is-active is-leaf leaf ">
+                <a href="/news/media-gallery" title="Media Gallery" class="menu__link">Media Gallery</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+  
+    </div>
+  </div>
+</div><nav role="navigation" aria-labelledby="block-secgov-account-menu-menu" id="block-secgov-account-menu">
+            
+  <h2 class="visually-hidden">User account menu</h2>
+  
+
+        
+              <ul id="user-menu" role="menubar" aria-hidden="false">
+        
+            <li class="login" role="menuitem">
+              <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+
+
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+
+        <div class="mobile-menu" style="display: none;">
+          
+              <ul id="main-menu" class="menu">
+                      <li class="menu__item is-expanded expanded">
+      
+        <a href="" class="menu__link">U.S. Securities and Exchange Commission</a>
+                                <ul class="menu">
+                      <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/divisions.shtml" class="menu__link" data-drupal-link-system-path="node/91856">Divisions &amp; Offices</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/litigation.shtml" class="menu__link">Enforcement</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/rules.shtml" class="menu__link">Regulation</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/investor" class="menu__link">Education</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/edgar.shtml" class="menu__link" data-drupal-link-system-path="node/91901">Filings</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/news" class="menu__link">Newsroom</a>
+              </li>
+
+        </ul>
+  
+              </li>
+
+                  <li class="menu__item is-expanded expanded">
+      
+        <a href="/news" class="menu__link">Newsroom</a>
+                                <ul class="menu">
+                      <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/news/pressreleases" class="menu__link" data-drupal-link-system-path="news/pressreleases">Press Releases</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/news/public-statements" class="menu__link">Public Statements</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/news/speeches" class="menu__link" data-drupal-link-system-path="news/speeches">Speehes</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/news/testimony" class="menu__link" data-drupal-link-system-path="news/testimony">Testimony</a>
+              </li>
+
+        </ul>
+  
+              </li>
+
+                  <li class="menu__item is-expanded expanded">
+      
+        <a href="/rss-feeds" class="menu__link">RSS Feeds</a>
+                                <ul class="menu">
+                      <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/rss/pressreleases" class="menu__link">Press Releases</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/rss/public-statements" class="menu__link">Public Statements</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/rss/speeches" class="menu__link">Speeches</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="/rss/testimony" class="menu__link">Testimony</a>
+              </li>
+
+        </ul>
+  
+              </li>
+
+                  <li class="menu__item is-expanded expanded">
+      
+        <a href="" class="menu__link">Social Media</a>
+                                <ul class="menu">
+                      <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="" class="menu__link">@SEC_News</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="" class="menu__link">SEC Channel</a>
+              </li>
+
+                  <li class="menu__item is-active is-leaf leaf">
+      
+        <a href="" class="menu__link">SEC Photostream</a>
+              </li>
+
+        </ul>
+  
+              </li>
+
+        </ul>
+  
+
+
+
+                      
+              <ul id="section-menu" class="menu">
+              <li class="menu__item is-active is-leaf leaf item-edgar-–-information-for-filers">
+        <a href="/edgar/filer-information" title="EDGAR – Information for Filers" class="menu__link" data-drupal-link-system-path="node/224596">EDGAR – Information for Filers</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-filer-websites">
+        <a href="" title="Filer Websites" class="menu__link">Filer Websites</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-apply-for-edgar-access">
+        <a href="https://www.filermanagement.edgarfiling.sec.gov/filermgmt/Welcome/EDGARFilerMgmtMain.htm" title="Apply for EDGAR Access" class="menu__link">Apply for EDGAR Access</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-ownership-forms-&amp;-regulation-d">
+        <a href="https://www.onlineforms.edgarfiling.sec.gov/Welcome/EDGAROnlineFormsLogin.htm" title="Ownership Forms &amp; Regulation D" class="menu__link">Ownership Forms &amp; Regulation D</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-all-other-forms">
+        <a href="https://www.edgarfiling.sec.gov/Welcome/EDGARLogin.htm" title="All Other Forms" class="menu__link">All Other Forms</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-edgar-filer-manual">
+        <a href="" title="EDGAR Filer Manual" class="menu__link">EDGAR Filer Manual</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-current">
+        <a href="/edgar/filer-information/current-edgar-filer-manual" class="menu__link is-active" data-drupal-link-system-path="node/228681">Current</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-draft">
+        <a href="/edgar/filer-information/draft-edgar-filer-manual" class="menu__link" data-drupal-link-system-path="node/228696">Draft</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-past-manuals">
+        <a href="/edgar/filer-information/past-edgar-technical-specifications" class="menu__link" data-drupal-link-system-path="node/228741">Past Manuals</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-technical-specifications">
+        <a href="" title="Technical Specifications" class="menu__link">Technical Specifications</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-current-&amp;-draft">
+        <a href="/edgar/filer-information/current-edgar-technical-specifications" title="Current &amp; Draft" class="menu__link" data-drupal-link-system-path="node/228711">Current &amp; Draft</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-past-specifications">
+        <a href="/edgar/filer-information/past-edgar-technical-specifications" title="Past Specifications" class="menu__link" data-drupal-link-system-path="node/228741">Past Specifications</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-taxonomies">
+        <a href="" title="Taxonomies" class="menu__link">Taxonomies</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-standard">
+        <a href="/info/edgar/edgartaxonomies.shtml" title="Standard" class="menu__link" data-drupal-link-system-path="node/114956">Standard</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-current-xbrl">
+        <a href="/structureddata/dera_taxonomies" title="Current XBRL" class="menu__link" data-drupal-link-system-path="node/96156">Current XBRL</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-interactive-data-test-suite">
+        <a href="/structureddata/osdinteractivedatatestsuite" title="Interactive Data Test Suite" class="menu__link" data-drupal-link-system-path="node/96046">Interactive Data Test Suite</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-filing-fees">
+        <a href="/page/ffbsectionlanding" title="Filing Fees" class="menu__link" data-drupal-link-system-path="node/38816">Filing Fees</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-about-edgar">
+        <a href="/edgar/about" title="About EDGAR" class="menu__link" data-drupal-link-system-path="node/234446">About EDGAR</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-edgar-–-search-&amp;-access">
+        <a href="/edgar/search-and-access" title="EDGAR – Search &amp; Access" class="menu__link" data-drupal-link-system-path="node/229191">EDGAR – Search &amp; Access</a>
+              </li>
+
+        </ul>
+  
+
+
+
+
+
+                  </div>
+
+      </div>
+    </section>
+          <div class="highlighted">
+        <aside class="message section clearfix" role="complementary">
+            <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+        </aside>
+      </div>
+    
+    
+                                
+        
+            
+    <section role="content">
+      <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
+
+                  
+
+      
+      
+            <div id="sidebar-first" class="sidebar">
+          <aside class="local-nav" role="complementary">
+            <nav role="navigation">
+                          
+              <ul id="section-menu" class="menu">
+              <li class="menu__item is-active is-leaf leaf item-edgar-–-information-for-filers">
+        <a href="/edgar/filer-information" title="EDGAR – Information for Filers" class="menu__link" data-drupal-link-system-path="node/224596">EDGAR – Information for Filers</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-filer-websites">
+        <a href="" title="Filer Websites" class="menu__link">Filer Websites</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-apply-for-edgar-access">
+        <a href="https://www.filermanagement.edgarfiling.sec.gov/filermgmt/Welcome/EDGARFilerMgmtMain.htm" title="Apply for EDGAR Access" class="menu__link">Apply for EDGAR Access</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-ownership-forms-&amp;-regulation-d">
+        <a href="https://www.onlineforms.edgarfiling.sec.gov/Welcome/EDGAROnlineFormsLogin.htm" title="Ownership Forms &amp; Regulation D" class="menu__link">Ownership Forms &amp; Regulation D</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-all-other-forms">
+        <a href="https://www.edgarfiling.sec.gov/Welcome/EDGARLogin.htm" title="All Other Forms" class="menu__link">All Other Forms</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-edgar-filer-manual">
+        <a href="" title="EDGAR Filer Manual" class="menu__link">EDGAR Filer Manual</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-current">
+        <a href="/edgar/filer-information/current-edgar-filer-manual" class="menu__link is-active" data-drupal-link-system-path="node/228681">Current</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-draft">
+        <a href="/edgar/filer-information/draft-edgar-filer-manual" class="menu__link" data-drupal-link-system-path="node/228696">Draft</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-past-manuals">
+        <a href="/edgar/filer-information/past-edgar-technical-specifications" class="menu__link" data-drupal-link-system-path="node/228741">Past Manuals</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-technical-specifications">
+        <a href="" title="Technical Specifications" class="menu__link">Technical Specifications</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-current-&amp;-draft">
+        <a href="/edgar/filer-information/current-edgar-technical-specifications" title="Current &amp; Draft" class="menu__link" data-drupal-link-system-path="node/228711">Current &amp; Draft</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-past-specifications">
+        <a href="/edgar/filer-information/past-edgar-technical-specifications" title="Past Specifications" class="menu__link" data-drupal-link-system-path="node/228741">Past Specifications</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-taxonomies">
+        <a href="" title="Taxonomies" class="menu__link">Taxonomies</a>
+                                <ul class="menu">
+              <li class="menu__item is-active is-leaf leaf item-standard">
+        <a href="/info/edgar/edgartaxonomies.shtml" title="Standard" class="menu__link" data-drupal-link-system-path="node/114956">Standard</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-current-xbrl">
+        <a href="/structureddata/dera_taxonomies" title="Current XBRL" class="menu__link" data-drupal-link-system-path="node/96156">Current XBRL</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-interactive-data-test-suite">
+        <a href="/structureddata/osdinteractivedatatestsuite" title="Interactive Data Test Suite" class="menu__link" data-drupal-link-system-path="node/96046">Interactive Data Test Suite</a>
+              </li>
+
+        </ul>
+  
+
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-filing-fees">
+        <a href="/page/ffbsectionlanding" title="Filing Fees" class="menu__link" data-drupal-link-system-path="node/38816">Filing Fees</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-about-edgar">
+        <a href="/edgar/about" title="About EDGAR" class="menu__link" data-drupal-link-system-path="node/234446">About EDGAR</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-edgar-–-search-&amp;-access">
+        <a href="/edgar/search-and-access" title="EDGAR – Search &amp; Access" class="menu__link" data-drupal-link-system-path="node/229191">EDGAR – Search &amp; Access</a>
+              </li>
+
+        </ul>
+  
+
+
+
+
+
+                                                                              </nav>
+
+          </aside>
+        </div>
+                    <div id="content-wrapper" class="layout-main">
+
+      <a id="main-content" tabindex="-1"></a>
+
+    
+          <div id="landing-page-title" class="clearfix">
+        
+        <h1 class="landing"> Current EDGAR Filer Manual (Volumes I - II) </h1>
+        <!-- Subscribe link, RSS, Email -->
+<div id="addthis-icons" aria-hidden="true" >
+  <div class="addthis-wrapper">
+    <div class="hide-for-print appIconsDetail" style="visibility: visible;">
+      <div class="addthis_toolbox addthis_default_style hide-for-small">
+        <a class="addthis_button_print at300b" title="Print" href="#" tabindex="0">
+          <span class="fa fa-print"></span>
+        </a>
+        <a class="addthis_button_facebook at300b" title="Facebook" href="#" tabindex="0">
+          <span class="fa fa-facebook"></span>
+        </a>
+        <a class="addthis_button_twitter at300b" title="Tweet" href="#" tabindex="0">
+          <span class="fa fa-twitter"></span>
+        </a>
+        <a class="addthis_button_email at300b" target="_blank" title="Email" href="#" tabindex="0">
+          <span class="fa fa-envelope"></span>
+        </a>
+        <a class="addthis_button_compact at300m" href="#" title="Share" tabindex="0">
+          <span class="fa fa-plus"></span>
+        </a>
+      <div class="atclear"></div>
+    </div>
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style hide-for-medium-up show-for-small addthis_mobile">
+      <a class="addthis_button_facebook at300b" title="Facebook" href="#" tabindex="0">
+        <span class="fa fa-facebook"></span>
+      </a>
+      <a class="addthis_button_twitter at300b" title="Tweet" href="#" tabindex="0">
+        <span class="fa fa-twitter"></span>
+      </a>
+      <a class="addthis_button_email at300b" target="_blank" title="Email" href="#" tabindex="0">
+        <span class="fa fa-envelope"></span>
+      </a>
+    </div>
+    <div class="atclear"></div>
+    </div>
+  </div>
+</div>
+      </div>
+    
+    
+              <div id="content" class="landing-page content">
+            <div class="main-content">
+    <div id="block-secgov-content">
+  
+    
+      
+<article data-history-node-id="228681" class="node node--type-landing_page node--view-mode-full clearfix">
+  
+    
+
+  <div>
+    
+
+
+<div class="panel-display panel-2col clearfix" >
+    <div class="panel-panel panel-top">
+  	<div class="block-region-top"><div class="block region__inner title">
+  <div class="block--menu-block" role="navigation">
+    <div class="menu-block-wrapper menu-name-main-menu">
+      
+            
+              
+
+
+          </div>
+  </div>
+</div></div>
+  </div>
+  <div class="panel-panel panel-col-first">
+    <div class="inside"><div class="block-region-left"><div class="block region__inner field_left_1_box">
+  <div class="block--menu-block" role="navigation">
+    <div class="menu-block-wrapper menu-name-main-menu">
+      
+            
+                <div class="field_left_1_box"><p>The EDGAR Filer Manual consists of two volumes. Volume I--General Information introduces the requirements for becoming an EDGAR Filer and maintaining EDGAR company information. Volume II--EDGAR Filing illustrates the process to submit an online filing.</p>
+
+<ul>
+	<li><a href="/info/edgar/specifications/edgarfm-vol1-v35.pdf">Download the EDGAR Filer Manual (Volume I) General Information</a> (Version 35)</li>
+	<li><a href="/info/edgar/specifications/edgarfm-vol2-v54.pdf">Download the EDGAR Filer Manual (Volume II) EDGAR Filing</a> (Version 54)</li>
+</ul>
+
+<h2>EDGAR Filer Manual (Volume I) General Information (Version 35)<br />
+Updated: January 27, 2020</h2>
+
+<p>On January 27, 2020, the following changes will be made to the EDGAR Filer Manual as part of EDGAR Release 20.1:</p>
+
+<ul>
+	<li>Submission form types ATS-N, ATS-N/MA, ATS-N/UA, ATS-N/CA, and ATS-N/OFA will be updated to display a text box when “No” is selected as a response to Item 16b. See Chapter 8 (Preparing and Transmitting Online Submissions) of the “EDGAR Filer Manual, Volume II: EDGAR Filing.”
+	<p style="margin-top: 10px;">For more information, see the “EDGAR Form ATS-N XML Technical Specification” document available at sec.gov (<a href="/edgar/filer-information/current-edgar-technical-specifications">https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications</a>).</p>
+	</li>
+	<li>Inline XBRL tag validation will be modified for certain submission form types as described in Chapter 6 (Interactive Data) Sections 6.5.20, 6.5.21, and 6.5.40 of the “EDGAR Filer Manual, Volume II: EDGAR Filing.”</li>
+	<li>Submission form types S-1, S-1/A, S-3, S-3/A, S-4, S-4/A, S-11, and S-11/A will be updated to include the “Accelerated Filer Status” field.
+	<p style="margin-top: 10px;">For more information, see the “EDGARLink Online XML Technical Specification” document available at sec.gov (<a href="/edgar/filer-information/current-edgar-technical-specifications">https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications</a>).</p>
+	</li>
+	<li>All SEC.gov websites, including EDGAR, will be upgraded to require Transport Layer Security 1.2. After the upgrade, all SEC.gov domains will no longer accept connections from systems and browsers using older security standards. Current versions of all major browsers are TLS 1.2 compliant. Filers and other EDGAR users should consider upgrading their browsers and systems to ensure continued ability to use EDGAR and to connect to SEC websites.</li>
+</ul>
+
+<p>Currently, the final US GAAP 2020, SEC Reporting 2020, and SEC 2020 taxonomies are expected to be added to the list of acceptable taxonomies in March 2020. When the taxonomies are added, it will be announced in a subsequent release announcement.</p>
+
+<p>Please see <a href="/info/edgar/edgartaxonomies.shtml">https://www.sec.gov/info/edgar/edgartaxonomies.shtml</a> for a complete list of supported standard taxonomies.</p>
+
+<ul class="bullet-1">
+	<li><a href="/info/edgar/specifications/edgarfm-vol1-v35.pdf">Download the EDGAR Filer Manual (Volume I) General Information</a> (Version 35) (compressed folder)</li>
+</ul>
+
+<h2>EDGAR Filer Manual (Volume II) EDGAR Filing (Version 54)<br />
+Updated: September 21, 2020</h2>
+
+<p>On September 21, 2020, EDGAR Release 20.3 will introduce the following changes:</p>
+
+<ul>
+	<li>EDGAR will be updated to add the following new submission form types, as contemplated by Commission Release 33-10765, adopted March 11, 2020:
+	<ul>
+		<li>497VPI: Initial summary prospectus for variable contracts filed pursuant to Securities Act Rule 497(k)</li>
+		<li>497VPU: Updating summary prospectus for variable contracts filed pursuant to Securities Act Rule 497(k)</li>
+		<li>N-VP: Notice Document for Certain Variable Contracts</li>
+		<li>N-VP/A: Amendment to Notice Document for Certain Variable Contracts</li>
+		<li>N-VPFS: Financial Statements for Certain Variable Contracts</li>
+		<li>N-VPFS/A: Amendment to Financial Statements for Certain Variable Contracts</li>
+	</ul>
+
+	<p style="margin-top: 9px;">The new submission form types will be accessible by selecting the “EDGARLink Online Form Submission” link on the EDGAR Filing Website. Additionally, filers may construct XML submissions for these submission form types by following the "EDGARLink Online XML Technical Specification" document available on <a href="https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications">https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications</a>. See Chapter 3 (Index to Forms) and Appendix C (EDGAR Submission Types) of the "EDGAR Filer Manual, Volume II: EDGAR Filing."</p>
+	</li>
+	<li>As part of Commission Release 33-10765, new exhibits for N-3, N-4, and N-6 will be made available on EDGARLink Online. Filers have the option to attach these new exhibits in official HTML or ASCII format (and unofficially in PDF format) on Forms N-3, N-4, and N-6. See Appendix E (Automated Conformance Rules for EDGAR Data Fields) of the "EDGAR Filer Manual, Volume II: EDGAR Filing."</li>
+	<li>As of September 21, 2020, EDGAR will no longer accept the following form types due to the Commission's rescission of the following form types: N-1, N-1/A, N-27E-1, N-27E-1/A, N-27F-1, and N-27F-1/A.</li>
+	<li>Submission form types N-CEN and N-CEN/A will be updated to include the following changes:
+	<ul>
+		<li>Added new sub-item “k. Rule 6c-11 (17 CFR 270.6c-11)” to Item C.7</li>
+		<li>Updated the static “Instruction” in Item E.2</li>
+	</ul>
+
+	<p>For more information see the “EDGAR Form N-CEN XML Technical Specification” document available on <a href="https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications">https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications</a>.</p>
+	</li>
+	<li>EDGAR will be updated to allow filers to “mark changed material” by redlining changed content in inline XBRL submissions for the following submission form types:
+	<p style="margin-top: 9px;">10-K, 10-K/A, 10-KT, 10-KT/A, 10-Q, 10-Q/A, 10-QT, 10-QT/A, 10-12B, 10-12B/A, 10-12G, 10-12G/A, 8-K, 8-K/A, 8-K12B, 8-K12B/A, 8-K12G3, 8-K12G3/A, 8-K15D5, 8-K15D5/A, 20-F, 20-F/A, 20FR12B, 20FR12B/A, 20FR12G, 20FR12G/A, 40-F, 40-F/A, 40FR12B, 40FR12B/A, 40FR12G, 40FR12G/A, 6-K, 6-K/A, SP 15D2, SP 15D2/A, POS AM, POS EX, POSASR, S-1, S-1/A, S-1MEF, S-3, S-3/A, S-3ASR, S-3D, S-3DPOS, S-3MEF, S-4, S-4/A, S-4EF, S-4MEF, S-4 POS, S-11, S-11/A, S-11MEF, F-1, F-1/A, F-1MEF, F-3, F-3/A, F-3ASR, F-3D, F-3DPOS, F-3MEF, F-4, F-4/A, F-4EF, F-4MEF, F-4 POS, F-10, F-10/A, F-10EF, F-10POS, 485BPOS, 497, 485APOS, 485BXT, N-1A, N-1A/A. See Chapter 5 (Constructing Attached Documents and Document Types) of the “EDGAR Filer Manual, Volume II: EDGAR Filing.”</p>
+	</li>
+	<li>EDGAR will disallow the IFRS-2018 taxonomy, DEI-2018 taxonomy, and Risk Return Taxonomy 2018 linkbases (presentation, calculation, and definition links). Please see <a href="https://www.sec.gov/info/edgar/edgartaxonomies.shtml">https://www.sec.gov/info/edgar/edgartaxonomies.shtml</a> for a complete list of supported standard taxonomies in EDGAR</li>
+</ul>
+
+<ul class="bullet-1">
+	<li><a href="/info/edgar/specifications/edgarfm-vol2-v54.pdf">Download the EDGAR Filer Manual (Volume II) EDGAR Filing (Version 54)</a> (compressed folder)</li>
+</ul>
+</div>
+          </div>
+  </div>
+</div></div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="block-region-right">
+<div class="block edgar-|-information-for-filers---resources-block">
+  
+    
+        <div class="body"><div class="stylized-box-2">
+<h3><strong>Resources</strong></h3>
+
+<hr /><h4><strong>Filing Times</strong></h4>
+
+<ul style="margin-top:0;"><li>6 a.m. – 10 p.m. ET, Monday – Friday except <a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/">federal holidays</a></li>
+</ul><h4><strong>Calendar</strong></h4>
+
+<ul style="margin-top:0;"><li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d8c87c32-3e77-46a7-81ff-a3e01cee7fec" href="/edgar/filer-information/calendar" title="EDGAR - Calendar">Federal holidays and peak filing dates</a></li>
+</ul><h4><strong>Contact EDGAR</strong></h4>
+
+<ul style="margin-top:0;"><li><strong><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8fea544f-b21e-47bd-8f22-36df92aa28ea" href="/edgar/filer-information/contact-filer-support" title="EDGAR - Contact Filer Support">Filer support</a>, </strong>9 a.m. – 5:30 p.m. ET, Monday – Friday except federal holidays</li>
+	<li><a href="https://www.sec.gov/edgar/filer-information/key-edgar-contacts">Key EDGAR contacts within SEC</a></li>
+</ul><h4><strong>Quick Links</strong></h4>
+
+<ul style="margin-top:0;"><li><a href="https://www.sec.gov/filergroup/announcements">EDGAR news and announcements</a></li>
+	<li><a href="https://www.sec.gov/forms">EDGAR forms</a></li>
+	<li><a href="https://www.edgarcompany.sec.gov/">EDGAR company database</a> and <a href="https://www.sec.gov/edgar/searchedgar/cik.htm">CIK lookup</a></li>
+	<li><a href="https://www.sec.gov/info/edgar/siccodes.htm">Standard industrial classification (SIC) code list</a></li>
+	<li><a href="/edgar/filer-information/state-and-country-codes">EDGAR state and country codes</a></li>
+	<li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ce85c79f-22d3-4908-b594-4a49eac17b10" href="/edgar/filer-information/how-do-i" title="EDGAR Filer Info - How Do I">How Do I? – EDGAR reference guides &amp; FAQs</a></li>
+</ul></div>
+</div>
+  </div>
+
+<div class="block edgar-|-information-for-filers---stay-informed-block">
+  
+    
+        <div class="body"><div id="subscribe">
+<div class="panel">
+<h2>Stay Informed</h2>
+
+<p>Subscribe to receive our latest&nbsp;<a href="https://www.sec.gov/filergroup/announcements">news and announcements</a> in your inbox.</p>
+
+<form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/USSEC/subscribers/qualify" id="GD-snippet-form" method="post" name="GD-snippet-form"><input id="topic_id" name="topic_id" type="hidden" value="USSEC_229" /> <input name="subscription_type" type="hidden" value="email" /> <label class="show-for-sr" for="email">E-mail Updates</label> <input id="email" name="email" title="Enter email address" type="text" value="Email address" /> <input class="form_button small button" id="gov-delivery-submit" name="commit" onclick="_gaq.push(['_trackEvent', 'EDGAR News and Announcements', 'Subscribe']);" type="submit" value="Subscribe" /></form>
+
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+  </div>
+</div></div>
+  </div>
+</div>
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+        </div>
+      
+        
+      
+      </div>
+
+              <p class="modified-date"><em>Modified: Sept. 21, 2020</em>
+         </p>
+      
+    </div>
+    </section>
+
+    <section role="footer">
+                <div>
+    
+<div id="block-globalfooterstayconnectedfooter" class="block stay-connected-footer">
+  
+    
+        <div class="body"><p class="data-exempt" id="stay-connected-footer"><span>STAY CONNECTED</span><br class="new-line" />
+<a href="/news/socialmedia.shtml"><span class="fa fa-lg fa-twitter"><span class="visually-hidden">1</span></span> <span class="hide-for-small">Twitter</span></a> <a href="/news/socialmedia.shtml"><span class="fa fa-lg fa-facebook"><span class="visually-hidden">2</span></span> <span class="hide-for-small">Facebook</span></a> <a href="/about/secrss.shtml"><span class="fa fa-lg fa-rss"><span class="visually-hidden">3</span></span><span class="hide-for-small">RSS</span></a> <a href="//www.youtube.com/user/SECViews/videos"><span class="fa fa-lg fa-youtube-play"><span class="visually-hidden">4</span></span><span class="hide-for-small">YouTube</span></a><br class="hide-for-medium-up" />
+<a href="//www.flickr.com/photos/us_sec/albums"><span class="fa fa-lg fa-flickr"><span class="visually-hidden">5</span></span> <span class="hide-for-small">Flickr</span></a> <a href="//www.linkedin.com/company/us-securities-and-exchange-commission?trk=mini-profile"> <span class="fa fa-lg fa-linkedin"><span class="visually-hidden">6</span></span><span class="hide-for-small">LinkedIn</span></a> <a href="//www.pinterest.com/secgov"><span class="fa fa-lg fa-pinterest-p"><span class="visually-hidden">7</span></span> <span class="hide-for-small">Pinterest</span></a> <a href="//public.govdelivery.com/accounts/USSEC/subscriber/new"><span class="fa fa-lg fa-envelope"><span class="visually-hidden">8</span></span> <span class="hide-for-small">Email Updates</span> </a></p>
+</div>
+  </div>
+<nav role="navigation" aria-labelledby="block-secgov-footer-menu" id="block-secgov-footer">
+            
+  <h2 class="visually-hidden">Footer menu</h2>
+  
+
+        
+              <ul id="section-menu" class="menu">
+              <li class="menu__item is-active is-leaf leaf item-accessibility">
+        <a href="/disability/sec_access.htm" class="menu__link" data-drupal-link-system-path="node/111766">Accessibility</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-budget-&amp;-performance">
+        <a href="/about/offices/ofm/ofm-documents.htm" class="menu__link" data-drupal-link-system-path="node/111606">Budget &amp; Performance</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-careers">
+        <a href="/careers" class="menu__link" data-drupal-link-system-path="node/41311">Careers</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-contact">
+        <a href="/contact-information/sec-directory" class="menu__link" data-drupal-link-system-path="node/102846">Contact</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-contracts">
+        <a href="/page/oacqsectionlanding" class="menu__link" data-drupal-link-system-path="node/3841">Contracts</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-data">
+        <a href="/sec-data-resources" class="menu__link" data-drupal-link-system-path="node/191566">Data</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-diversity-and-inclusion-">
+        <a href="https://www.sec.gov/diversity-and-inclusion-sec" title="Diversity and Inclusion " class="menu__link">Diversity and Inclusion </a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-foia">
+        <a href="/page/office-foia-services" class="menu__link" data-drupal-link-system-path="node/41166">FOIA</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-inspector-general">
+        <a href="/oig" class="menu__link" data-drupal-link-system-path="node/41456">Inspector General</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-investor.gov">
+        <a href="https://www.investor.gov/" class="menu__link">Investor.gov</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-no-fear-act-&amp;-eeo-data">
+        <a href="/page/eeosectionlanding" class="menu__link" data-drupal-link-system-path="node/3781">No FEAR Act &amp; EEO Data</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-ombudsman">
+        <a href="https://www.sec.gov/ombudsman" class="menu__link">Ombudsman</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-plain-writing">
+        <a href="/plainwriting.shtml" class="menu__link" data-drupal-link-system-path="node/111701">Plain Writing</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-privacy-&amp;-security">
+        <a href="/privacy.htm" class="menu__link" data-drupal-link-system-path="node/111706">Privacy &amp; Security</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-related-sites">
+        <a href="/links" class="menu__link" data-drupal-link-system-path="node/100276">Related Sites</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-site-map">
+        <a href="/sitemap.shtml" class="menu__link" data-drupal-link-system-path="node/111831">Site Map</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-usa.gov">
+        <a href="https://www.usa.gov/" class="menu__link">USA.gov</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-votes">
+        <a href="/about/commission-votes.shtml" class="menu__link" data-drupal-link-system-path="node/111231">Votes</a>
+              </li>
+
+          <li class="menu__item is-active is-leaf leaf item-whistleblower-protection">
+        <a href="/whistleblower" class="menu__link" data-drupal-link-system-path="node/99851">Whistleblower Protection</a>
+              </li>
+
+        </ul>
+  
+
+
+
+
+
+  </nav>
+
+  </div>
+
+          </section>
+                <script>
+        if (typeof dataLayer != "undefined") dataLayer.push({"pageType": "EDGAR - Current EDGAR Filer Manual"});
+      </script>
+        </div>
+</div>
+</container>
+
+<section role="off-canvas">
+
+</section>
+
+
+  </div>
+
+    
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>Return to Top</a>
+
+    <div class="overlap">
+  <!-- Subscribe link, RSS, Email -->
+  <div id="addthis-icons-508" class="visibly-hidden">
+    <div class="addthis-wrapper">
+      <div class="appIconsDetail hide">
+        <div class="addthis_toolbox addthis_default_style hide-for-small">
+          <a class="addthis_button_print at300b" title="Print" href="#">
+            <span class="fa fa-print"></span>
+          </a>
+          <a class="addthis_button_facebook at300b" title="Facebook" href="#">
+            <span class="fa fa-facebook"></span>
+          </a>
+          <a class="addthis_button_twitter at300b" title="Tweet" href="#">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a class="addthis_button_email at300b" target="_blank" title="Email" href="#">
+            <span class="fa fa-envelope"></span>
+          </a>
+          <a class="addthis_button_compact at300m" href="#" title="Share">
+            <span class="fa fa-plus"></span>
+          </a>
+        <div class="atclear"></div>
+      </div>
+      <div class="addthis_toolbox hide">
+        <a class="addthis_button_facebook at300b" title="Facebook" href="#">
+          <span class="fa fa-facebook"></span>
+        </a>
+        <a class="addthis_button_twitter at300b" title="Tweet" href="#">
+          <span class="fa fa-twitter"></span>
+        </a>
+        <a class="addthis_button_email at300b" target="_blank" title="Email" href="#">
+          <span class="fa fa-envelope"></span>
+        </a>
+      </div>
+      <div class="atclear"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/228681","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":".*\\.gov|http:\/\/www.xbrl.org\/utr\/2013-05-17\/utr.xml|http:\/\/www.xbrl.org\/dtr\/type\/numeric-2009-12-16.xsd|http:\/\/www.xbrl.org\/dtr\/type\/nonNumeric-2009-12-16.xsd|https:\/\/secir.secure.force.com\/ombudsman\/OMMSForm","extInclude":"","extCssExclude":".data-exempt","extCssExplicit":"","extAlert":true,"extAlertText":"You are now leaving the SEC Website. The link you have selected is located on another server. Please click on the OK button below to proceed to the selected site. The SEC does not endorse this web site, its sponsor, or any of the policies, activities, products, or services offered on the site or by any advertiser on the site.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"user":{"uid":0,"permissionsHash":"34c5530e399151d56adc3e02e8041f71e09c3a4b8e95ff1c5442f13d79d0d783"}}</script>
+<script src="/files/js/js_9wY-atDO9M1UiVIcY9mvZiyGU8NcSXevJTfJ6B1zPBc.js"></script>
+<script src="/themes/custom/secgov/js/third-party/addthis_widget.js?qj49c1" async></script>
+<script src="/files/js/js_MDgzDD5hj94qmmq4I7UEld7i_JawcSiSaAXsYu2QhGQ.js"></script>
+
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"32edb8f179","applicationID":"436723953","transactionName":"ZQZSMBQEXxZZARJeXlxMcQcSDF4LFxIHUFRtAFEHDgA=","queueTime":0,"applicationTime":26,"atts":"SUFRRlweTBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  </html>
