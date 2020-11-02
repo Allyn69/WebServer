@@ -1,0 +1,713 @@
+<html>
+<head>
+    <title>Allyn69/AIPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/stylesheets/index.css" rel="stylesheet"/>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/echarts@4.2.1/dist/echarts-en.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119015333-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119015333-3');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1677442094360914",
+        enable_page_level_ads: true
+    });
+</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <style>
+        .xxxad .adsbygoogle {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<div class="headBar">
+    <div class="arrow_box">
+        <a id="list-link-head" style="display: block" href=""><div class="list-of-arrow">profile</div></a>
+        <a  id="viewpoint-link-head"style="display: block" href=""><div class="list-of-arrow">viewpoint</div></a>
+    </div>
+    <a href="/" class="my-love-gitmemory">
+    </a>
+    <div class="join-with-github" id="header-bar-login">
+        <!--<div style="width: 40px;height: 40px;margin-top: -10px;"><img style="border-radius: 50%;" width="100%" src=""></div>-->
+        <!--<a onclick="location.href='/api/login?href='+location.href">join with Github</a>-->
+    </div>
+    <div class="g-search" style="float: right;height: 67px;width: 255px;margin-right: 20px;box-sizing: border-box">
+        <input class="search-input" placeholder="gitMemory :)" id="search-input2" style="font-size: 18px;width: 200px;padding-bottom: 5px">
+        <div class="search-btn" id="search-btn2" style="width: 30px;height: 30px;background-color: #ff7f27;"><i class="fa fa-search" aria-hidden="true"></i></div>
+        <div class="recommend-header-list">
+            <a class="item-recommend" href="/nodejs/node">
+                <img src="https://raw.githubusercontent.com/github/explore/fd96fceccf8c42c99cbe29cf0f8dcc4736fcb85a/topics/nodejs/nodejs.png" width="40px">
+                <span>nodejs</span>
+            </a>
+            <a class="item-recommend" href="/vuejs/vue">
+                <img src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/vue/vue.png" width="40px">
+                <span>vue.js</span>
+            </a>
+            <a class="item-recommend" href="/ry">
+                <img class="user" src="https://avatars2.githubusercontent.com/u/80?s=400&v=4" width="40px">
+                <span>ry ( nodejs Founder ) </span>
+            </a>
+            <a class="item-recommend" href="/facebook/react">
+                <img  src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/react/react.png" width="40px">
+                <span>React</span>
+            </a>
+            <a class="item-recommend" href="/rust-lang/rust">
+                <img style="background-color: white;border-radius: 50%" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/rust/rust.png" width="40px">
+                <span>Rust</span>
+            </a>
+            <a class="item-recommend" href="/tensorflow/tensorflow">
+                <img  src="https://avatars0.githubusercontent.com/u/15658638?s=200&v=4" width="40px">
+                <span>tensorflow</span>
+            </a>
+            <a class="item-recommend" href="/spring-projects/spring-boot">
+                <img style="border-radius: 50%" src="https://avatars0.githubusercontent.com/u/317776?s=200&v=4" width="40px">
+                <span>Spring Boot</span>
+            </a>
+            <a class="item-recommend" href="/golang/go">
+                <img style="border-radius: 50%;background-color: white" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/go/go.png" width="40px">
+                <span>golang</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="echarts-warpper" style="padding-top: 20px;height: 300px">
+    <div id="echarts-box1"></div>
+    <div id="echarts-box2"></div>
+    <div id="echarts-box3"></div>
+</div>
+<div style="width: 100%;background-color: #333333;position: relative;
+    z-index: 100;">
+    <div id='star-chart'
+         style='cursor: pointer; width: 840px; height:300px;margin: 0 auto;position: relative;z-index: 1000'></div>
+</div>
+<div class="yinying-ab-beijing" style="top:685px">
+</div>
+<div class="black-box"></div>
+<div class="xxxad" style="width: 780px;
+    margin:0 auto;position: relative;z-index: 200;border-radius: 10px;box-sizing: border-box;overflow: hidden;
+margin-bottom: 30px;margin-top: 14px;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- 项目横幅广告 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-fe+7+3q-89+jg"
+         data-ad-client="ca-pub-1677442094360914"
+         data-ad-slot="4660818054"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>    <!-- 项目横幅广告 -->
+</div>
+<div class="repo-content" style="background-color: #dfdfdf;width: 780px">
+    <p class="repo-name">Allyn69/AIPro</p>
+    <p class="repo-desc">An Open Source Data processing Framework for AI</p>
+    <p class="repo-desc"><a
+                href="https://aipro.works">https://aipro.works</a>
+    </p>
+    <a class="repo-owner" href="/Allyn69">
+        <span class="issue-create-name">Allyn69</span><img
+                data-lazy-src="https://avatars2.githubusercontent.com/u/46991653?v=4" class="iseeue-create-user-img">
+    </a>
+</div>
+<div class="comments-box">
+    <p class="comments-title">viewpoint</p>
+    <div class="comments-list" id="vue-comment-list" style="display: none">
+        <div class="comment-item" v-for="item in list">
+            <div class="comments-avatar">
+                <img :src="item.userAvatar" width="100%" height="100%"/>
+            </div>
+            <div class="comments-item-content">
+                <p>
+                    <strong><a class="comment-user-name-0" :href="'/'+item.userName"
+                               v-text="item.userName"></a></strong>
+                    <span style="margin-left: 20px;color: #333" v-text="item.updatedAt"></span>
+                    <span v-if="userInfo&&userInfo.login===item.userName" class="delete-comment-icon"
+                          @click="deleteById(item.id)"><i class="fa fa-trash-o"></i></span>
+                </p>
+                <div class="md comment-item-content-1" v-html="item.markDataHtml">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments-viewpoints-add-box">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        Express your opinions freely and help others including your future self
+    </div>
+    <div class="comments-editor">
+        <textarea id="editor">Markdown here!</textarea>
+        <button type="submit" class="comments-commit">submit</button>
+    </div>
+</div>
+<div class="issue-other-list-warp" style="width: 780px;margin: 0 auto;position: relative">
+    <p style="font-size: 20px;">Issues rank</p>
+    
+    
+        <span style="padding-top: 10px;display:block;color: #bfbfbf">
+                No questions were found.
+            </span>
+    
+</div>
+<div class="data-list-map" id="data-list-map"></div>
+<div class="contributors-list">
+    <p><i class="fa fa-github-alt" aria-hidden="true"></i> contributors (According to the first 100)</p>
+    <div class="cont-people-list">
+        
+            <a href="/richiefrost" alt="richiefrost" style="display: block">
+                <div class="contr-item-warp">
+                    <img data-lazy-src="https://avatars1.githubusercontent.com/u/7143744?v=4" style="width: 100px;height: 100px;"/>
+                    <span class="cont-name-span">richiefrost</span>
+                </div>
+            </a>
+        
+            <a href="/debjyoti385" alt="debjyoti385" style="display: block">
+                <div class="contr-item-warp">
+                    <img data-lazy-src="https://avatars0.githubusercontent.com/u/3104032?v=4" style="width: 100px;height: 100px;"/>
+                    <span class="cont-name-span">debjyoti385</span>
+                </div>
+            </a>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+  var data = [{"id":199754814,"node_id":"MDEwOlJlcG9zaXRvcnkxOTk3NTQ4MTQ=","name":"AIPro","full_name":"Allyn69/AIPro","private":false,"owner":{"login":"Allyn69","id":46991653,"node_id":"MDQ6VXNlcjQ2OTkxNjUz","avatar_url":"https://avatars2.githubusercontent.com/u/46991653?v=4","gravatar_id":"","url":"https://api.github.com/users/Allyn69","html_url":"https://github.com/Allyn69","followers_url":"https://api.github.com/users/Allyn69/followers","following_url":"https://api.github.com/users/Allyn69/following{/other_user}","gists_url":"https://api.github.com/users/Allyn69/gists{/gist_id}","starred_url":"https://api.github.com/users/Allyn69/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Allyn69/subscriptions","organizations_url":"https://api.github.com/users/Allyn69/orgs","repos_url":"https://api.github.com/users/Allyn69/repos","events_url":"https://api.github.com/users/Allyn69/events{/privacy}","received_events_url":"https://api.github.com/users/Allyn69/received_events","type":"User","site_admin":false},"html_url":"https://github.com/Allyn69/AIPro","description":"An Open Source Data processing Framework for AI","fork":true,"url":"https://api.github.com/repos/Allyn69/AIPro","forks_url":"https://api.github.com/repos/Allyn69/AIPro/forks","keys_url":"https://api.github.com/repos/Allyn69/AIPro/keys{/key_id}","collaborators_url":"https://api.github.com/repos/Allyn69/AIPro/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/Allyn69/AIPro/teams","hooks_url":"https://api.github.com/repos/Allyn69/AIPro/hooks","issue_events_url":"https://api.github.com/repos/Allyn69/AIPro/issues/events{/number}","events_url":"https://api.github.com/repos/Allyn69/AIPro/events","assignees_url":"https://api.github.com/repos/Allyn69/AIPro/assignees{/user}","branches_url":"https://api.github.com/repos/Allyn69/AIPro/branches{/branch}","tags_url":"https://api.github.com/repos/Allyn69/AIPro/tags","blobs_url":"https://api.github.com/repos/Allyn69/AIPro/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/Allyn69/AIPro/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/Allyn69/AIPro/git/refs{/sha}","trees_url":"https://api.github.com/repos/Allyn69/AIPro/git/trees{/sha}","statuses_url":"https://api.github.com/repos/Allyn69/AIPro/statuses/{sha}","languages_url":"https://api.github.com/repos/Allyn69/AIPro/languages","stargazers_url":"https://api.github.com/repos/Allyn69/AIPro/stargazers","contributors_url":"https://api.github.com/repos/Allyn69/AIPro/contributors","subscribers_url":"https://api.github.com/repos/Allyn69/AIPro/subscribers","subscription_url":"https://api.github.com/repos/Allyn69/AIPro/subscription","commits_url":"https://api.github.com/repos/Allyn69/AIPro/commits{/sha}","git_commits_url":"https://api.github.com/repos/Allyn69/AIPro/git/commits{/sha}","comments_url":"https://api.github.com/repos/Allyn69/AIPro/comments{/number}","issue_comment_url":"https://api.github.com/repos/Allyn69/AIPro/issues/comments{/number}","contents_url":"https://api.github.com/repos/Allyn69/AIPro/contents/{+path}","compare_url":"https://api.github.com/repos/Allyn69/AIPro/compare/{base}...{head}","merges_url":"https://api.github.com/repos/Allyn69/AIPro/merges","archive_url":"https://api.github.com/repos/Allyn69/AIPro/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/Allyn69/AIPro/downloads","issues_url":"https://api.github.com/repos/Allyn69/AIPro/issues{/number}","pulls_url":"https://api.github.com/repos/Allyn69/AIPro/pulls{/number}","milestones_url":"https://api.github.com/repos/Allyn69/AIPro/milestones{/number}","notifications_url":"https://api.github.com/repos/Allyn69/AIPro/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/Allyn69/AIPro/labels{/name}","releases_url":"https://api.github.com/repos/Allyn69/AIPro/releases{/id}","deployments_url":"https://api.github.com/repos/Allyn69/AIPro/deployments","created_at":"2019-07-31T01:30:49Z","updated_at":"2020-01-13T05:57:28Z","pushed_at":"2019-07-30T06:27:09Z","git_url":"git://github.com/Allyn69/AIPro.git","ssh_url":"git@github.com:Allyn69/AIPro.git","clone_url":"https://github.com/Allyn69/AIPro.git","svn_url":"https://github.com/Allyn69/AIPro","homepage":"https://aipro.works","size":102810,"stargazers_count":1,"watchers_count":1,"language":"JavaScript","has_issues":false,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"forks":0,"open_issues":0,"watchers":1,"default_branch":"master","permissions":{"admin":false,"push":false,"pull":true},"temp_clone_token":"","parent":{"id":158502884,"node_id":"MDEwOlJlcG9zaXRvcnkxNTg1MDI4ODQ=","name":"AIPro","full_name":"InitialDLab/AIPro","private":false,"owner":{"login":"InitialDLab","id":17975310,"node_id":"MDEyOk9yZ2FuaXphdGlvbjE3OTc1MzEw","avatar_url":"https://avatars3.githubusercontent.com/u/17975310?v=4","gravatar_id":"","url":"https://api.github.com/users/InitialDLab","html_url":"https://github.com/InitialDLab","followers_url":"https://api.github.com/users/InitialDLab/followers","following_url":"https://api.github.com/users/InitialDLab/following{/other_user}","gists_url":"https://api.github.com/users/InitialDLab/gists{/gist_id}","starred_url":"https://api.github.com/users/InitialDLab/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/InitialDLab/subscriptions","organizations_url":"https://api.github.com/users/InitialDLab/orgs","repos_url":"https://api.github.com/users/InitialDLab/repos","events_url":"https://api.github.com/users/InitialDLab/events{/privacy}","received_events_url":"https://api.github.com/users/InitialDLab/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/InitialDLab/AIPro","description":"An Open Source Data processing Framework for AI","fork":false,"url":"https://api.github.com/repos/InitialDLab/AIPro","forks_url":"https://api.github.com/repos/InitialDLab/AIPro/forks","keys_url":"https://api.github.com/repos/InitialDLab/AIPro/keys{/key_id}","collaborators_url":"https://api.github.com/repos/InitialDLab/AIPro/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/InitialDLab/AIPro/teams","hooks_url":"https://api.github.com/repos/InitialDLab/AIPro/hooks","issue_events_url":"https://api.github.com/repos/InitialDLab/AIPro/issues/events{/number}","events_url":"https://api.github.com/repos/InitialDLab/AIPro/events","assignees_url":"https://api.github.com/repos/InitialDLab/AIPro/assignees{/user}","branches_url":"https://api.github.com/repos/InitialDLab/AIPro/branches{/branch}","tags_url":"https://api.github.com/repos/InitialDLab/AIPro/tags","blobs_url":"https://api.github.com/repos/InitialDLab/AIPro/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/InitialDLab/AIPro/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/InitialDLab/AIPro/git/refs{/sha}","trees_url":"https://api.github.com/repos/InitialDLab/AIPro/git/trees{/sha}","statuses_url":"https://api.github.com/repos/InitialDLab/AIPro/statuses/{sha}","languages_url":"https://api.github.com/repos/InitialDLab/AIPro/languages","stargazers_url":"https://api.github.com/repos/InitialDLab/AIPro/stargazers","contributors_url":"https://api.github.com/repos/InitialDLab/AIPro/contributors","subscribers_url":"https://api.github.com/repos/InitialDLab/AIPro/subscribers","subscription_url":"https://api.github.com/repos/InitialDLab/AIPro/subscription","commits_url":"https://api.github.com/repos/InitialDLab/AIPro/commits{/sha}","git_commits_url":"https://api.github.com/repos/InitialDLab/AIPro/git/commits{/sha}","comments_url":"https://api.github.com/repos/InitialDLab/AIPro/comments{/number}","issue_comment_url":"https://api.github.com/repos/InitialDLab/AIPro/issues/comments{/number}","contents_url":"https://api.github.com/repos/InitialDLab/AIPro/contents/{+path}","compare_url":"https://api.github.com/repos/InitialDLab/AIPro/compare/{base}...{head}","merges_url":"https://api.github.com/repos/InitialDLab/AIPro/merges","archive_url":"https://api.github.com/repos/InitialDLab/AIPro/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/InitialDLab/AIPro/downloads","issues_url":"https://api.github.com/repos/InitialDLab/AIPro/issues{/number}","pulls_url":"https://api.github.com/repos/InitialDLab/AIPro/pulls{/number}","milestones_url":"https://api.github.com/repos/InitialDLab/AIPro/milestones{/number}","notifications_url":"https://api.github.com/repos/InitialDLab/AIPro/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/InitialDLab/AIPro/labels{/name}","releases_url":"https://api.github.com/repos/InitialDLab/AIPro/releases{/id}","deployments_url":"https://api.github.com/repos/InitialDLab/AIPro/deployments","created_at":"2018-11-21T06:43:20Z","updated_at":"2020-04-01T06:39:30Z","pushed_at":"2020-09-07T20:45:15Z","git_url":"git://github.com/InitialDLab/AIPro.git","ssh_url":"git@github.com:InitialDLab/AIPro.git","clone_url":"https://github.com/InitialDLab/AIPro.git","svn_url":"https://github.com/InitialDLab/AIPro","homepage":"https://aipro.works","size":104333,"stargazers_count":3,"watchers_count":3,"language":"JavaScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":3,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":13,"license":null,"forks":3,"open_issues":13,"watchers":3,"default_branch":"master"},"source":{"id":158502884,"node_id":"MDEwOlJlcG9zaXRvcnkxNTg1MDI4ODQ=","name":"AIPro","full_name":"InitialDLab/AIPro","private":false,"owner":{"login":"InitialDLab","id":17975310,"node_id":"MDEyOk9yZ2FuaXphdGlvbjE3OTc1MzEw","avatar_url":"https://avatars3.githubusercontent.com/u/17975310?v=4","gravatar_id":"","url":"https://api.github.com/users/InitialDLab","html_url":"https://github.com/InitialDLab","followers_url":"https://api.github.com/users/InitialDLab/followers","following_url":"https://api.github.com/users/InitialDLab/following{/other_user}","gists_url":"https://api.github.com/users/InitialDLab/gists{/gist_id}","starred_url":"https://api.github.com/users/InitialDLab/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/InitialDLab/subscriptions","organizations_url":"https://api.github.com/users/InitialDLab/orgs","repos_url":"https://api.github.com/users/InitialDLab/repos","events_url":"https://api.github.com/users/InitialDLab/events{/privacy}","received_events_url":"https://api.github.com/users/InitialDLab/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/InitialDLab/AIPro","description":"An Open Source Data processing Framework for AI","fork":false,"url":"https://api.github.com/repos/InitialDLab/AIPro","forks_url":"https://api.github.com/repos/InitialDLab/AIPro/forks","keys_url":"https://api.github.com/repos/InitialDLab/AIPro/keys{/key_id}","collaborators_url":"https://api.github.com/repos/InitialDLab/AIPro/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/InitialDLab/AIPro/teams","hooks_url":"https://api.github.com/repos/InitialDLab/AIPro/hooks","issue_events_url":"https://api.github.com/repos/InitialDLab/AIPro/issues/events{/number}","events_url":"https://api.github.com/repos/InitialDLab/AIPro/events","assignees_url":"https://api.github.com/repos/InitialDLab/AIPro/assignees{/user}","branches_url":"https://api.github.com/repos/InitialDLab/AIPro/branches{/branch}","tags_url":"https://api.github.com/repos/InitialDLab/AIPro/tags","blobs_url":"https://api.github.com/repos/InitialDLab/AIPro/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/InitialDLab/AIPro/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/InitialDLab/AIPro/git/refs{/sha}","trees_url":"https://api.github.com/repos/InitialDLab/AIPro/git/trees{/sha}","statuses_url":"https://api.github.com/repos/InitialDLab/AIPro/statuses/{sha}","languages_url":"https://api.github.com/repos/InitialDLab/AIPro/languages","stargazers_url":"https://api.github.com/repos/InitialDLab/AIPro/stargazers","contributors_url":"https://api.github.com/repos/InitialDLab/AIPro/contributors","subscribers_url":"https://api.github.com/repos/InitialDLab/AIPro/subscribers","subscription_url":"https://api.github.com/repos/InitialDLab/AIPro/subscription","commits_url":"https://api.github.com/repos/InitialDLab/AIPro/commits{/sha}","git_commits_url":"https://api.github.com/repos/InitialDLab/AIPro/git/commits{/sha}","comments_url":"https://api.github.com/repos/InitialDLab/AIPro/comments{/number}","issue_comment_url":"https://api.github.com/repos/InitialDLab/AIPro/issues/comments{/number}","contents_url":"https://api.github.com/repos/InitialDLab/AIPro/contents/{+path}","compare_url":"https://api.github.com/repos/InitialDLab/AIPro/compare/{base}...{head}","merges_url":"https://api.github.com/repos/InitialDLab/AIPro/merges","archive_url":"https://api.github.com/repos/InitialDLab/AIPro/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/InitialDLab/AIPro/downloads","issues_url":"https://api.github.com/repos/InitialDLab/AIPro/issues{/number}","pulls_url":"https://api.github.com/repos/InitialDLab/AIPro/pulls{/number}","milestones_url":"https://api.github.com/repos/InitialDLab/AIPro/milestones{/number}","notifications_url":"https://api.github.com/repos/InitialDLab/AIPro/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/InitialDLab/AIPro/labels{/name}","releases_url":"https://api.github.com/repos/InitialDLab/AIPro/releases{/id}","deployments_url":"https://api.github.com/repos/InitialDLab/AIPro/deployments","created_at":"2018-11-21T06:43:20Z","updated_at":"2020-04-01T06:39:30Z","pushed_at":"2020-09-07T20:45:15Z","git_url":"git://github.com/InitialDLab/AIPro.git","ssh_url":"git@github.com:InitialDLab/AIPro.git","clone_url":"https://github.com/InitialDLab/AIPro.git","svn_url":"https://github.com/InitialDLab/AIPro","homepage":"https://aipro.works","size":104333,"stargazers_count":3,"watchers_count":3,"language":"JavaScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":3,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":13,"license":null,"forks":3,"open_issues":13,"watchers":3,"default_branch":"master"},"network_count":3,"subscribers_count":0},{"total_count":0,"incomplete_results":false,"items":[]},{"JavaScript":144629,"Python":41484,"Shell":2841,"HTML":1797,"CSS":892},[{"login":"richiefrost","id":7143744,"node_id":"MDQ6VXNlcjcxNDM3NDQ=","avatar_url":"https://avatars1.githubusercontent.com/u/7143744?v=4","gravatar_id":"","url":"https://api.github.com/users/richiefrost","html_url":"https://github.com/richiefrost","followers_url":"https://api.github.com/users/richiefrost/followers","following_url":"https://api.github.com/users/richiefrost/following{/other_user}","gists_url":"https://api.github.com/users/richiefrost/gists{/gist_id}","starred_url":"https://api.github.com/users/richiefrost/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/richiefrost/subscriptions","organizations_url":"https://api.github.com/users/richiefrost/orgs","repos_url":"https://api.github.com/users/richiefrost/repos","events_url":"https://api.github.com/users/richiefrost/events{/privacy}","received_events_url":"https://api.github.com/users/richiefrost/received_events","type":"User","site_admin":false,"contributions":92},{"login":"debjyoti385","id":3104032,"node_id":"MDQ6VXNlcjMxMDQwMzI=","avatar_url":"https://avatars0.githubusercontent.com/u/3104032?v=4","gravatar_id":"","url":"https://api.github.com/users/debjyoti385","html_url":"https://github.com/debjyoti385","followers_url":"https://api.github.com/users/debjyoti385/followers","following_url":"https://api.github.com/users/debjyoti385/following{/other_user}","gists_url":"https://api.github.com/users/debjyoti385/gists{/gist_id}","starred_url":"https://api.github.com/users/debjyoti385/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/debjyoti385/subscriptions","organizations_url":"https://api.github.com/users/debjyoti385/orgs","repos_url":"https://api.github.com/users/debjyoti385/repos","events_url":"https://api.github.com/users/debjyoti385/events{/privacy}","received_events_url":"https://api.github.com/users/debjyoti385/received_events","type":"User","site_admin":false,"contributions":26}],{}]
+  var starList = [["2020-01-13T05:57:28Z",1]]
+  var myChart = echarts.init(document.getElementById('echarts-box1'));
+  var option = {
+    title: {
+      textStyle: {
+        color: '#fff'
+      },
+      subtext: 'issue counts',
+      x: 'center'
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+      orient: 'vertical',
+      x: 'left',
+      data: [{value: data[0].open_issues, name: 'open issues'},
+        {value: data[1].total_count, name: 'closed issues'}],
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    color: ['#AEEEEE', '#FFE4B5'],
+    series: [
+      {
+        center: ['50%', '50%'],
+        name: 'events',
+        type: 'pie',
+        radius: ['50%', '70%'],
+        avoidLabelOverlap: false,
+
+        data: [{value: data[0].open_issues, name: 'open issues'},
+          {value: data[1].total_count, name: 'closed issues'}]
+      }
+
+    ]
+  };
+  myChart.setOption(option);
+</script>
+<script>
+  var myChart2 = echarts.init(document.getElementById('echarts-box2'));
+  var language = []
+  for (var l in data[2]) {
+    var item = {}
+    item['value'] = data[2][l]
+    item['name'] = l
+    language.push(item)
+  }
+  var option2 = {
+    tooltip: {
+      trigger: 'item',
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      orient: 'vertical',
+      x: 'left',
+      data: language.reverse(),
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    series: [
+      {
+        name: '',
+        type: 'pie',
+        radius: ['50%', '70%'],
+        center: ['50%', '50%'],
+        data: language.sort(function (a, b) {
+          return a.value - b.value;
+        }),
+        animationType: 'scale',
+        animationEasing: 'elasticOut'
+      }
+    ]
+  };
+  myChart2.setOption(option2);
+</script>
+<script>
+  var myChart3 = echarts.init(document.getElementById('echarts-box3'));
+  var stars_count = data[0].stargazers_count
+  var forks_count = data[0].forks_count
+  var watches_count = data[0].subscribers_count
+  var option3 = {
+    backgroundColor: 'rgba(0,0,0,0.0)',
+    tooltip: {},
+    radar: {
+      shape: 'circle',
+      indicator: [
+        {name: 'Star', max: Math.max(stars_count, watches_count, forks_count)},
+        {name: 'Watch', max: Math.max(stars_count, watches_count, forks_count)},
+        {name: 'Fork', max: Math.max(stars_count, watches_count, forks_count)}
+      ],
+      splitLine: {
+        lineStyle: {
+          color: [
+            'rgba(45, 234, 148, 0.1)', 'rgba(45, 234, 148, 0.2)',
+            'rgba(45, 234, 148, 0.4)', 'rgba(45, 234, 148, 0.6)',
+            'rgba(45, 234, 148, 0.8)', 'rgba(45, 234, 148, 1)'
+          ].reverse()
+        }
+      },
+      name: {
+        textStyle: {
+          color: 'rgb(238, 197, 102)'
+        }
+      },
+      splitArea: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(45, 234, 148, 0.5)'
+        }
+      }
+    },
+    axisLine: {
+      lineStyle: {
+        color: 'rgba(238, 197, 102, 0.5)'
+      }
+    },
+    series: [{
+      name: 'Activity',
+      type: 'radar',
+      symbolSize: 0,
+      itemStyle: {normal: {areaStyle: {type: 'default'}}},
+      data: [
+        {
+          value: [stars_count, watches_count, forks_count],
+          name: 'Activity'
+        }
+      ],
+      color: 'rgba(40,167,69,1.0)'
+
+    }]
+  };
+  myChart3.setOption(option3);
+</script>
+<script>
+  var datetime_to_date_str = function (datetime) {
+    var year = datetime.getFullYear();
+    var month = left_padding_zero((datetime.getMonth() + 1));
+    var day = left_padding_zero(datetime.getDate());
+    return year + '-' + month + '-' + day;
+  };
+  var get_total_commit_count = function (commits) {
+    var commits_total_count = 0;
+    commits.forEach(function (c) {
+      commits_total_count += c[1];
+    });
+    return commits_total_count;
+  };
+  var commit_data = data[4]
+  var left_padding_zero = function (int) {
+    return int < 10 ? '0' + int : int;
+  };
+  var mill_sec_one_day = 24 * 3600 * 1000;
+  var datetime_to_utc_date = function (datetime) {
+    var year = datetime.getUTCFullYear();
+    var month = left_padding_zero((datetime.getUTCMonth() + 1));
+    var day = left_padding_zero(datetime.getUTCDate());
+    return new Date(year + '-' + month + '-' + day + 'T00:00:00Z');
+  };
+  var myChart4 = echarts.init(document.getElementById('data-list-map'), 'dark');
+  var now = new Date();
+  var today = datetime_to_utc_date(now);
+  var week = now.getUTCDay();
+  var days = 51 * 7 + week + 1;
+  var one_year_ago = new Date(today.getTime() - (days - 1) * mill_sec_one_day);
+
+  var commits = new Array(days);
+  var end = today;
+  var start = one_year_ago;
+  for (var i = 0; i < commits.length; i++) {
+    commits[i] = [new Date(one_year_ago.getTime() + i * mill_sec_one_day).toISOString(), commit_data[Math.floor(i / 7)]['days'][i % 7]];
+  }
+  var option4 =  {
+    backgroundColor: 'rgba(0,0,0,0.0)',
+    title: {
+      subtext: 'Repository Commit Activity: ' + get_total_commit_count(commits) + ' commits during ' + datetime_to_date_str(start) + ' ~ ' + datetime_to_date_str(end),
+      left: '11%',  // 不要用right，否则副标题不显示
+      top: '1%'  // 不要用bottom，否则副标题不显示
+    },
+    tooltip: {
+      position: 'top',
+      formatter: function (params) {
+        return params['marker'] + ' '
+          + params['value'][1] + ' commits on '
+          + echarts.format.formatTime('yyyy-MM-dd', params['value'][0]);
+
+      }
+    },
+    visualMap: {
+      show: false,
+      min: 0,
+      max: 10,
+      calculable: true,
+      orient: 'horizontal',
+      left: 'center',
+      top: 'top',
+      inRange: {
+        color: ['#4A4A4A', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+      }
+    },
+
+    calendar: [
+      {
+        range: [start, end],
+        left: 'center',
+        cellSize: [15, 15],
+        splitLine: {
+          show: false
+        },
+        itemStyle: {
+          borderWidth: 2,
+          borderColor: '#000'
+        },
+        dayLabel: {
+          show: false
+        },
+        monthLabel: {
+          color: '#fff'
+        },
+        yearLabel: {
+          show: false
+        }
+
+      }],
+
+    series: [{
+      type: 'heatmap',
+      coordinateSystem: 'calendar',
+      calendarIndex: 0,
+      data: commits
+    }]
+
+  };
+
+  myChart4.setOption(option4);
+</script>
+<script>
+    $(document).ready(function () {
+        var display_star_chart = function (data) {
+            var myChart5 = echarts.init(document.getElementById('star-chart'), 'dark');
+
+            var option = {
+                backgroundColor: 'rgba(0,0,0,0.0)',
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: function (params) {
+                        return params[0]['marker'] + ' '
+                            + params[0]['value'][1] + ' stars on '
+                            + echarts.format.formatTime('yyyy-MM-dd', params[0]['axisValue']);
+                    }
+                },
+                xAxis: {
+                    type: 'time',
+                    minInterval: mill_sec_one_day,
+                    axisLine: {
+                        onZero: false,
+                        lineStyle: {
+                            width: 3
+                        }
+                    },
+                    axisTick: {
+                        lineStyle: {
+                            width: 2
+                        }
+                    },
+                    axisLabel: {
+                        interval: 0,
+                        formatter: function (value, index) {
+                            return echarts.format.formatTime('yyyy-MM-dd', value);
+                        }
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLine: {
+                        show: false,
+                        onZero: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#434343',
+                            type: 'solid',
+                            width: 2
+                        }
+                    },
+                    min: 'dataMin'
+                },
+                visualMap: {
+                    show: false,
+                    dimension: 1,
+                    pieces: [{
+                        lte: 0,
+                        color: 'rgba(40,167,69,1.0)'
+                    }, {
+                        lte: github_returned_max_stars,
+                        color: 'rgba(40,167,69,1.0)'
+                    }, {
+                        gt: github_returned_max_stars,
+                        color: 'rgba(40,167,69,0.3)'
+                    }]
+                },
+                dataZoom: [
+                    {
+                        type: 'slider',
+                        realtime: false,
+                        xAxisIndex: 0,
+                        filterMode: 'filter',
+                        dataBackground: {
+                            areaStyle: {
+                                color: 'rgba(255,255,255,0.5)'
+                            }
+                        },
+                        labelFormatter: function (value) {
+                            return echarts.format.formatTime('yyyy-MM-dd', value);
+                        }
+                    },
+                    {
+                        type: 'inside',
+                        xAxisIndex: 0,
+                        filterMode: 'filter'
+                    }
+                ],
+                series: [
+                    {
+                        id: 'a',
+                        type: 'line',
+                        showSymbol: false,
+                        smooth: true,
+                        data: data,
+                        markPoint: {
+                            silent: true,
+                            data: [
+                                {type: 'max', name: 'Stargazers Now'}
+                            ]
+                        },
+                        color: 'rgba(40,167,69,1.0)'
+                    }
+                ]
+            };
+
+            myChart5.setOption(option);
+        };
+
+        const github_returned_max_stars = 39999;
+        const mill_sec_one_day = 24 * 3600 * 1000;
+
+
+        var render_stargazers = function () {
+            display_star_chart( starList);
+        };
+
+
+        render_stargazers();
+    });
+
+</script>
+
+<script>
+  function goLoc(q) {
+    if (!q) {
+      window.location.href = '/'
+    } else {
+      window.location.href = '/search?q=' + q
+    }
+  }
+
+  $('#search-btn2').click(function () {
+    goLoc($('#search-input2').val())
+  })
+
+  $('#search-input2').bind('keypress', function (event) {
+    if (event.keyCode == 13) {
+      goLoc($('#search-input2').val())
+    }
+  });
+
+  $('.item-recommend').hover(function () {
+    $(this).stop()
+    var width = $(this).find('span').width()
+    $(this).animate({width:(width+70)+"px"});
+    $(this).find('span').fadeIn()
+  },function () {
+    $(this).stop()
+    $(this).animate({width:"40px"});
+    $(this).find('span').fadeOut()
+  })
+</script>
+<script src="https://unpkg.com/myeasylazyload@1.0.3/dist/EasyLazyload.min.js"></script>
+<script>
+  lazyLoadInit({
+    coverColor:"white",
+    offsetBottom:0,
+    offsetTopm:0,
+    showTime:1100,
+    onLoadBackEnd:function(i,e){
+
+    }
+    ,onLoadBackStart:function(i,e){
+
+    }
+  });
+</script>
+<script>
+    let is_open = 0
+  //cookie
+  let proofuser  = new Promise(function (resolve) {
+    $.get("/api/getUserInfo").done(function (data) {
+      if(data.login){
+        resolve(data)
+        userInfo = data
+        $('#list-link-head').attr('href','/'+data.login)
+        $('#viewpoint-link-head').attr('href','/user/viewPointList/'+data.login)
+        $('#header-bar-login').html('<div id="userAvatar-head" style="width: 40px;height: 40px;margin-top: -10px;"><img style="border-radius: 50%;" width="100%" src="'+data.avatar_url+'"></div>')
+        $("#userAvatar-head").click(function () {
+          if(is_open===0){
+            $('.arrow_box').show()
+            is_open = 1
+          }else{
+            $('.arrow_box').hide()
+            is_open = 0
+          }
+        })
+      }else{
+        $('#header-bar-login').html('<a onclick="location.href=\'/api/login?href=\'+location.href">join with Github</a>')
+      }
+    }).fail(function (e) {
+      $('#header-bar-login').html('<a onclick="location.href=\'/api/login?href=\'+location.href">join with Github</a>')
+    })
+  })
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+  var language = navigator.language;
+  if (language == 'zh-CN') { 
+    $('#relx').show(0) 
+  }
+</script>
+
+<script>
+    var canSubmit = 0;
+    var simplemde;
+    var app = new Vue({
+        el: '#vue-comment-list',
+        data: {
+            list: [],
+            userInfo: null
+        },
+        mounted: function () {
+
+        },
+        methods: {
+            deleteById: function (id) {
+                $.get("/api/repo/comment/delete", {id: id}, function (rep) {
+                    if (rep.error == 0) {
+                        toastr.success("delete success")
+                        $.get("/api/repo/comment/findview", {repo: "Allyn69/AIPro"}, function (back) {
+                            app.list = back
+                            if (back && back.length > 0)
+                                $('#vue-comment-list').fadeIn()
+                        })
+                    } else {
+                        toastr.warning(rep.errmsg)
+                    }
+                })
+            }
+        }
+    })
+    proofuser.then(function (uf) {
+        app.userInfo = uf
+    })
+    $('.comments-viewpoints-add-box').click(function () {
+        simplemde = new SimpleMDE({
+            element: document.getElementById("editor"),
+            hideIcons: ["guide", "heading", "fullscreen", "side-by-side", "preview"],
+        });
+        $(this).hide()
+        $('.comments-editor').fadeToggle()
+    })
+    $(".comments-commit").click(function () {
+        if (canSubmit === 1) {
+            return
+        }
+        canSubmit = 1
+        if (simplemde.value() !== "Markdown here!") {
+            $.post("/api/repo/comment/submit",
+                {
+                    repoCreaterAvatar: 'https://avatars2.githubusercontent.com/u/46991653?v=4',
+                    markData: simplemde.value(),
+                    responseName: "Allyn69/AIPro"
+                },
+                function (data) {
+
+                    canSubmit = 0
+                    if (data.error == 0) {
+                        toastr.success('success')
+                        $.get("/api/repo/comment/findview", {repo: "Allyn69/AIPro"}, function (back) {
+                            app.list = back
+                            if (back && back.length > 0)
+                                $('#vue-comment-list').fadeIn()
+                        })
+                    } else {
+                        toastr.warning(data.errmsg)
+                    }
+                })
+        }
+    })
+    // 初始化请求
+    $.get("/api/repo/comment/findview", {repo: "Allyn69/AIPro"}, function (back) {
+        app.list = back
+        if (back && back.length > 0)
+            $('#vue-comment-list').fadeIn()
+    })
+</script>
+</body>
+</html>

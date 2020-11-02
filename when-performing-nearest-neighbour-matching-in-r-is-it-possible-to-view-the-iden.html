@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+            <head>
+                
+
+                <title>When performing nearest neighbour matching in R, is it possible to view the identity of which cases matched with which controls? - Stack Overflow</title>
+                <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+                <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script src="https://cdn.sstatic.net/Js/stub.en.js?v=7a01f5bb0e31"></script>
+                <script src="https://cdn.sstatic.net/Js/mobile.en.js?v=f423f15c79ca"></script>
+                
+                
+                <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=13d89c0c9941" >
+                <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/mobile.css?v=e7f62227bb2d" >
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+                    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+                
+                
+                
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#x27;When performing nearest neighbour matching in R, is it possible to view the identity of which cases matched with which controls?&#x27;" href="/feeds/question/64026870">
+        <script>
+            StackExchange.ready(function () {
+                StackExchange.question.init({votesCast:[],autoShowCommentHelp:true,showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,questionId:64026870});
+
+                styleCode();
+            });
+        </script>
+
+                <script>
+                    var opts = {"locale":"en","serverTime":1600860329,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","isMobile":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","styleCodeWithHighlightjs":false,"negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"8a40751ac8517e7a6218d39b531ac07dea37d706b13ce25e28cd8337b57761b7","tid":"450dc050-5f6d-a2a3-b88a-7772ef543c13","rep":1,"isRegistered":true,"userType":3,"userId":11487045,"accountId":15309092,"gravatar":"<div class=\"gravatar-wrapper-32\"><img src=\"https://graph.facebook.com/2447771601964453/picture?type=large\" alt=\"\" width=\"32\" height=\"32\" class=\"bar-sm\"></div>","profileUrl":"https://stackoverflow.com/users/11487045/allyn-charpentier","canSeeDeletedPosts":false},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/svg-icons","svgIconHash":"e06df390d347"};
+                    opts.isMobile = true;
+                    opts.fullPostfix = "";
+                    StackExchange.init(opts, {"userProfile":{"openGraphAPIKey":"4a307e43-b625-49bb-af15-ffadf2bda017"},"userMessaging":{"showNewFeatureNotice":true},"tags":{},"subscriptions":{"defaultMaxTrueUpSeats":1000},"snippets":{"renderDomain":"stacksnippets.net","snippetsEnabled":true},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad","sidebarAdDismissCookieExpirationDays":60.0},"site":{"allowImageUploads":true,"enableImgurHttps":true,"enableUserHovercards":true,"forceHttpsImages":true,"styleCode":true},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{},"flags":{"allowRetractingCommentFlags":true,"allowRetractingFlags":true},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}});
+                    StackExchange.using.setCacheBreakers({"js/adops.en.js":"22a9bd59b1e9","js/ask.en.js":"83cc8cb596d5","js/begin-edit-event.en.js":"cb9965ad8784","js/events.en.js":"a9b2936c1eec","js/explore-qlist.en.js":"22610455f68f","js/full-anon.en.js":"04ed1ae2dedf","js/full.en.js":"8a3701e4b5a0","js/help.en.js":"76e2886f2122","js/highlightjs-loader.en.js":"56157fa5e160","js/inline-tag-editing.en.js":"1b88a7bb274f","js/keyboard-shortcuts.en.js":"f8c28e88dbbc","js/markdown-it-loader.en.js":"e8730cf897c1","js/mobile.en.js":"f423f15c79ca","js/moderator.en.js":"2565e0ff5cd4","js/postCollections-transpiled.en.js":"927c6fd07d62","js/post-validation.en.js":"a3f3c41edbb9","js/prettify-full.en.js":"996c99fc46f9","js/question-editor.en.js":"","js/review.en.js":"eb0adff60bdd","js/revisions.en.js":"a4bb7dac3796","js/stacks-editor.en.js":"c46a46b23e26","js/tageditor.en.js":"40425ddd4257","js/tageditornew.en.js":"36e44bf2ebaa","js/tagsuggestions.en.js":"4e6582be0533","js/wmd.en.js":"89b47da52bd4","js/snippet-javascript-codemirror.en.js":"accc84890d8b"});
+
+                    StackExchange.using("mobile", function() { StackExchange.mobile.init(); });
+
+                    StackExchange.using(
+                        "gps",
+                        function() {
+                            StackExchange.gps.init(true);
+                        }
+                    );
+                </script>
+                
+            </head>
+            <body class="no-message-slide question-single">
+                    
+<div class="topbar _old">
+    <div class="network-items">
+                <a href="https://stackexchange.com" class="topbar-icon js-site-switcher-button icon-site-switcher-bubble">
+                    <span class="hidden">Stack Exchange</span>
+                    <i class="icon-hamburger"></i>
+                </a>
+            <div class="icon-site-name">
+                <a href="https://stackoverflow.com">Stack Overflow</a>
+            </div>
+    
+        <a href="#" class="topbar-icon icon-inbox js-inbox-button">
+                <span class="hidden">Inbox</span>
+            <span class="unread-count" style="display:none"></span>
+        </a>
+        <a href="#" class="topbar-icon icon-achievements js-achievements-button " data-unread-class="">
+                <span class="hidden">Reputation and Badges</span>
+            <span class="unread-count" style="display:none"></span>
+        </a>
+    </div>
+    <div class="js-topbar-dialog-corral">
+            
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="https://stackoverflow.com">current community</a></h3>
+        <a href="#"
+           class="icon-close js-close-button">
+            <span class="hidden">Close</span>
+        </a>
+
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                    <div class="user-card">
+                        <a href="/users/11487045/allyn-charpentier">
+                            <div class="gravatar-wrapper-32"><img src="https://graph.facebook.com/2447771601964453/picture?type=large" alt="" width="32" height="32" class="bar-sm avatar"></div>
+                            <span class="name">Allyn Charpentier</span>
+                            <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+                        </a>
+                    </div>
+                        <div class="related-links">
+                            <a href="https://stackoverflow.com/users/logout" data-gps-track="site_switcher.click({ item_type:8 })">log out</a>
+                        </div>
+                </li>
+                     <li>
+                                 <div class="related-links">
+                <a href="https://meta.stackoverflow.com" data-gps-track="site_switcher.click({ item_type:4 })">meta</a>
+                <a href="https://chat.stackoverflow.com" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+        </div>
+    <a href="https://stackoverflow.com"
+       class="current-site-link site-link js-gps-track grid gs8 gsx"
+       data-id="1"
+       data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-stackoverflow site-icon grid--cell" title="Stack Overflow"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow
+        </span>
+    </a>
+
+                     </li>
+        </ul>
+    </div>
+    
+        <div class="header" id="your-communities-header">
+            <h3>
+                    <a href="https://stackexchange.com/users/15309092/?tab=accounts">your communities</a>
+            </h3>
+
+        </div>
+
+    <div class="modal-content" id="your-communities-section">
+            
+                 <ul class="my-sites">
+                         <li>
+                                 <a href="https://meta.stackexchange.com"
+       class=" site-link js-gps-track grid gs8 gsx"
+       data-id="4"
+       data-gps-track="site.switch({ target_site:4, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-stackexchangemeta site-icon grid--cell" title="Meta Stack Exchange"></div>
+        <span class="grid--cell fl1">
+            Meta Stack Exchange
+        </span>
+            <span class="rep-score grid--cell">1</span>
+    </a>
+
+                         </li>
+                         <li>
+                                 <a href="https://stackoverflow.com"
+       class=" site-link js-gps-track grid gs8 gsx"
+       data-id="1"
+       data-gps-track="site.switch({ target_site:1, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-stackoverflow site-icon grid--cell" title="Stack Overflow"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow
+        </span>
+            <span class="rep-score grid--cell">1</span>
+    </a>
+
+                         </li>
+                         <li>
+                                 <a href="https://unix.stackexchange.com"
+       class=" site-link js-gps-track grid gs8 gsx"
+       data-id="106"
+       data-gps-track="site.switch({ target_site:106, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-unix site-icon grid--cell" title="Unix &amp; Linux"></div>
+        <span class="grid--cell fl1">
+            Unix &amp; Linux
+        </span>
+            <span class="rep-score grid--cell">1</span>
+    </a>
+
+                         </li>
+                 </ul>
+    </div>
+    <div class="header">
+        <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+        </h3>
+        <div class="float-right">
+            <a href="https://stackoverflow.blog">company blog</a>
+        </div>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.topbar.init();
+        });
+    </script>
+
+                
+                    <nav class="nav">
+                        <ul>
+                                    <li class="current "><a href="/questions" title="Questions">Questions</a></li>
+
+        <li><a href="/jobs" title="Jobs">Jobs</a></li>
+                                    <li><a href="/tags" title="Tags">Tags</a></li>
+
+                                    <li><a href="/users" title="Users">Users</a></li>
+
+                                    <li><a href="/help/badges" title="Badges">Badges</a></li>
+
+                                    <li class="nav-askquestion"><a href="/questions/ask" title="Ask">Ask</a></li>
+
+                        </ul>
+                    </nav>
+
+                <div id="notify-container">
+                </div>
+
+
+            
+
+
+                <main class="snippet-hidden">
+                    
+<div itemscope>
+
+<div class="question"  id="question" data-questionid="64026870">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+    <header class="-summary">
+        <div class="-votes vote js-voting-container" data-post-id="64026870" data-ltu="False">
+        <a class="js-vote-up-btn vote-up-off" title="This question shows research effort; it is useful and clear" data-selected-classes="vote-up-on" aria-pressed="false" role="button" tabindex="0" href="#">Up vote</a>
+        <span itemprop="upvoteCount" class="js-vote-count vote-count-post mobile-vote-count" data-value="0">0</span>
+        <a class="js-vote-down-btn vote-down-off" title="This question does not show any research effort; it is unclear or not useful" data-selected-classes="vote-down-on" aria-pressed="false" role="button" tabindex="0" href="#">Down vote</a>
+
+        <button class="js-bookmark-btn s-btn s-btn__unset c-pointer py4 js-gps-track bookmark-off" aria-pressed="false" aria-label="bookmark" data-selected-classes="fc-yellow-600"
+                data-gps-track="post.click({ item: 1, priv: -1, post_type: 1 })">
+            <svg aria-hidden="true" class="svg-icon iconBookmark" width="18" height="18" viewBox="0 0 18 18"><path d="M6 1a2 2 0 00-2 2v14l5-4 5 4V3a2 2 0 00-2-2H6zm3.9 3.83h2.9l-2.35 1.7.9 2.77L9 7.59l-2.35 1.7.9-2.76-2.35-1.7h2.9L9 2.06l.9 2.77z"/></svg>
+        </button>
+</div>
+
+
+        <div class="-details">
+            <h2 itemprop="name">
+
+                    <a href="https://stackoverflow.com/questions/64026870/when-performing-nearest-neighbour-matching-in-r-is-it-possible-to-view-the-iden" class="question-hyperlink">When performing nearest neighbour matching in R, is it possible to view the identity of which cases matched with which controls?</a>
+            </h2>
+            <div class="-tags">
+
+                        <a href="/questions/tagged/r" class="post-tag">r</a>
+                    
+                        <a href="/questions/tagged/rstudio" class="post-tag">rstudio</a>
+                    
+                        <a href="/questions/tagged/nearest-neighbor" class="post-tag">nearest-neighbor</a>
+                    
+                        <a href="/questions/tagged/propensity-score-matching" class="post-tag">propensity-score-matching</a>
+                                </div>
+        </div><!-- / details -->
+    </header>
+
+    <div class="s-prose js-post-body" itemprop="text">
+                    
+<p>I'm first trying this out in R Studio with a small practice dataset found here (584 obs, 5 variables) (<a href="https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1330&amp;context=pare" rel="nofollow noreferrer">https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1330&amp;context=pare</a>)</p>
+<p>Using this code I can use nearest neighbour matching to find the mean difference in matched cases and controls (1:1) where stw is my grouping variable and tot, min, and dis are the matching variables:</p>
+<p>`m.out = matchit(stw ~ tot + min + dis,
+data = mydata, method = &quot;nearest&quot;,
+ratio = 1)'</p>
+<p>what i want to to know is how can i view which cases have matched with which controls (i.e. shows me the exact identity)?</p>
+<p>I would also like to do this where I match 5 nearest neighbours (i.e. ratio = 5) and also view those exact identities. is there additional code needed for this?</p>
+<p>many thanks</p>
+    </div><!-- / s-prose -->
+    <time itemprop="dateCreated" datetime="2020-09-23T11:22:34"></time>
+    <footer>
+            <div class="util-bar post-menu">
+            <a href="/q/64026870/11487045"
+               rel="nofollow"
+               itemprop="url"
+               class="js-share-link js-gps-track"
+               title="short permalink to this question"
+               data-gps-track="post.click({ item: 2, priv: -1, post_type: 1 })"
+               data-controller="se-share-sheet"
+               data-se-share-sheet-title="Share a link to this question"
+               data-se-share-sheet-subtitle="(includes your user id)"
+               data-se-share-sheet-post-type="question"
+               data-se-share-sheet-social="facebook twitter devto"
+               data-se-share-sheet-location="1"
+               data-se-share-sheet-license-url="https%3a%2f%2fcreativecommons.org%2flicenses%2fby-sa%2f4.0%2f"
+               data-se-share-sheet-license-name="CC BY-SA 4.0"
+               data-s-popover-placement="bottom-start">share</a>
+
+            <button id="btnFollowPost-64026870" class="s-btn s-btn__link fc-black-400 h:fc-black-700 px4 pb2 js-follow-post js-gps-track" role="button"
+                    data-gps-track="post.click({ item: 14, priv: -1, post_type: 1 })"
+                    data-controller="s-tooltip" data-s-tooltip-placement="bottom"
+                    data-s-popover-placement="bottom" aria-controls="divFollowingConfirm-64026870">
+                follow
+            </button>
+
+
+
+
+    </div>
+<div class="menu-popup-container" data-postid="64026870" style="display:none;"></div>
+        
+    <div class="user-info owner" itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<div class="user-action-time">
+            asked <span title="2020-09-23 11:22:34Z" class="relativetime">2 mins ago</span>
+		</div>
+		<div class="user-gravatar">
+            <a href="/users/14326855/robert-king"><div class="gravatar-wrapper-30"><img src="https://lh5.googleusercontent.com/-0Bsi20mLCHs/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmP5cLtA1l6IWxEie-6O6jyUoGg5g/photo.jpg?sz=30" alt="" width="30" height="30" class="bar-sm"></div></a>
+		</div>
+		<div class="user-details">
+            <a href="/users/14326855/robert-king">Robert King</a><br><span class="d-none" itemprop="name">Robert King</span>            <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+		</div>
+	</div>
+
+    </footer>
+
+        
+<div id="comments-64026870" class="comments-wrap comments js-comments-container dno" data-post-id="64026870" data-min-length="15">
+    <ul class="comments-list js-comments-list" data-remaining-comments-count="0"
+            data-canpost="false"
+            data-cansee="true"
+            data-comments-unavailable="false"
+            data-addlink-disabled="true">
+    </ul>
+    <div class="comment-form">
+        <div id="comments-link-64026870" class="comment-link-container" data-rep=50 data-reg=true>
+                <a class="js-add-link comments-link disabled-link" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments." >add a comment</a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+    <style>
+    </style>
+<div class="js-zone-container zone-container-responsive">
+    <div id="dfp-m-aq" class="everyonelovesstackoverflow everyoneloves__tag-sponsorship mx-auto"></div>
+    <div class="js-report-ad-button-container mx-auto" style="width: 300px"></div>
+</div>
+    <a name="tab-top"></a>
+
+    <div class="subheader">
+        <div class="-title">
+            <h2>0 Answers</h2>
+            <span style="display:none;" itemprop="answerCount">0</span>
+        </div>
+
+        <div class="-actions">
+            <form id="answersort" action="#tab-top" class="-sorter" method="get">
+                <label>
+                    order by
+                    <select name="answertab" class="submit-on-change _naked _link">
+                        <option value="active" selected="selected">active</option>
+                        <option value="oldest">oldest</option>
+                        <option value="votes">votes</option>
+                    </select>
+                </label>
+            </form>
+        </div><!-- / actions -->
+        
+        
+    </div><!-- / subheader -->
+
+
+
+    <a name='new-answer'></a>
+        <div class="subheader ">
+            <div class="-title">
+                <h2>Your Answer</h2>
+            </div>
+        </div><!-- / subheader -->
+        <form id="post-form" class="wrapper _inner post-form " action="/questions/64026870/answer/submit" method="post">
+            <input type="hidden" id="post-id" value="64026870" />
+
+            <fieldset>
+                    
+
+<div class="post-editor" data-role="uploader-scrolltotarget">  
+
+
+    <div class="field _toolbar">
+        <label for="wmd-input">Body</label>
+        <div class="-item">
+            <div class="-toolbar">
+                <ul>
+                    <li>
+                        <label for="upload-trigger">
+                            <svg aria-hidden="true" class="svg-icon iconImage" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V3zm4.5 7.5L2 15h14l-4.5-6L8 13.51 5.5 10.5zm0-4.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                            Add picture
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+        </div>
+
+        <input type="checkbox" class="overlay-trigger js-overlay-trigger" id="upload-trigger">
+
+        <div class="overlay">
+            <header class="-header">
+                <div class="-title">
+                    <h2>Upload</h2>
+                </div>
+                <div class="-actions">
+                    <button type="button" class="s-btn js-close">Cancel</button>
+                    <button type="button" class="s-btn s-btn__primary js-submit">Add picture</button>
+                </div>
+            </header>
+            <section class="-body wrapper _inner">
+                <div class="uploader-error form-error" style="display: none"></div>
+                
+                <div class="field uploader">
+                    <div class="-area js-area">
+                        <label>
+                            <input type="file" accept="image/*" class="js-image-input">
+                            <i class="-illustration"></i>
+                            <p>
+                                Click here to upload your image
+                                <small>(max 2 MiB)</small>
+                            </p>
+                        </label>
+
+                        <figure class="hidden-important"><img></figure>
+                    </div>
+
+                    <div class="js-restart hidden-important">
+                        <p class="text-centered help-text">
+                            <small><a href="#" class="js-restart-trigger">Cancel and add another image</a></small>
+                        </p>
+                    </div>
+
+                    <div class="js-image-url">
+                        <p class="js-image-url-info text-centered help-text">
+                            <small>You can also provide a <a href="#" class="js-image-url-trigger">link from the web</a>.</small>
+                        </p>
+
+                        <div class="field _inline-flex js-image-url-field hidden-important">
+                            <div class="-item _wide">
+                                <input type="url" placeholder="http://example.com/image.png">
+                            </div>
+                            <div class="-item">
+                                <button type="button" class="s-btn js-image-url-cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.helpers.loadTicks();
+            StackExchange.mobile.overlay.init();
+
+                StackExchange.mobile.uploader.init();
+                        });
+    </script>
+
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="8a40751ac8517e7a6218d39b531ac07dea37d706b13ce25e28cd8337b57761b7">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+
+                    
+
+
+            </fieldset>
+
+            <fieldset class="actions">
+
+                        
+                        <button class="s-btn s-btn__primary" id="submit-button" type="submit" tabindex="110">
+                            Post Your Answer
+                        </button>
+                        <script>
+                            StackExchange.mobile.initDraft('answer-on-64026870', '#post-form', '#submit-button', false);
+                        </script>
+                                </fieldset><!-- / actions -->
+        </form><!-- / wrapper -->
+
+<script>StackExchange.ready(function(){$.get('/posts/64026870/ivc/b7d1');});</script>
+<noscript><div><img src="/posts/64026870/ivc/b7d1" class="dno" alt="" width="0" height="0"></div></noscript><div style="display:none" id="js-codeblock-lang">lang-r</div></div>
+                </main>
+                
+                    
+<script>;try{(function(a){function b(a){return'string'==typeof a?document.getElementById(a):a}function c(a){return a=b(a),!!a&&'none'===getComputedStyle(a).display}function d(a){return!c(a)}function e(a){return!!a}function f(a){return /^\s*$/.test(b(a).innerHTML)}function g(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none'}function h(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none',[].forEach.call(a.children,h)}function i(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.removeProperty('display')}function j(a,b){var c;return function(){return a&&(c=a.call(b||this,arguments),a=null),c}}function k(a){var b=document.createElement('script');b.src=a,document.body.appendChild(b)}function l(a){return m([],a)}function m(a,b){return a.push=function(a){return b(),delete this.push,this.push(a)},a}function n(){try{return!new Function('return async()=>{};')}catch(a){return!0}}function o(){return'undefined'!=typeof googletag&&!!googletag.apiReady}function p(){o()||(googletag={cmd:l(B)})}function q(){var a=document.createElement('div');a.className='adsbox',a.id='clc-abd',a.style.position='absolute',a.style.pointerEvents='none',a.innerHTML='&nbsp;',document.body.appendChild(a)}function r(){return Object.keys(F.ids)}function s(a){var b=F.ids[a],c=F.slots[b];'function'==typeof c&&(c=c(a));return{path:'/'+C+'/'+E+'/'+b+'/'+D,sizes:c,zone:b}}function t(a){try{Array.isArray(clc.dfp.slotsRenderedEvents)||(clc.dfp.slotsRenderedEvents=[]),clc.dfp.slotsRenderedEvents.push(a);var b=a.slot.getSlotElementId(),c=[];b||c.push('id=0');var d=document.getElementById(b);if(!b||d?d.hasAttribute('data-clc-stalled')&&c.push('st=1'):c.push('el=0'),0!==c.length)return void G(c.join('&'));var e=s(b),f=e.zone;if(clc.collapse&&clc.collapse[f]&&a.isEmpty)return h(d),void d.setAttribute('data-clc-ready','true');if(-1!==y.dh.indexOf(a.lineItemId))h(d);else if(a.lineItemId){d.setAttribute('data-clc-prefilled','true');var j=d.parentElement;if(j.classList.contains('js-zone-container')){g(j);var k=j.querySelectorAll('.js-report-ad-button-container'),l=k[0];switch(l.style.height='24px',b){case'dfp-tlb':case'dfp-tag':{j.classList.add('mb8');break}case'dfp-mlb':case'dfp-smlb':case'dfp-bmlb':{j.classList.add('my8');break}case'dfp-isb':{j.classList.add('mt24');break}case'dfp-m-aq':{j.classList.add('my12'),j.classList.add('mx-auto');break}default:}i(j),i(d)}else i(d);if('dfp-msb'==b){var m=document.getElementById('hireme');h(m)}}d.setAttribute('data-clc-ready','true')}catch(a){var n=document.querySelector('#dfp-tsb, #dfp-isb, #clc-tsb');n&&n.setAttribute('data-clc-ready','true'),G('e=1')}}function u(a,b){'dfp-isb'===a&&b.setTargeting('Sidebar',['Inline']),'dfp-tsb'===a&&b.setTargeting('Sidebar',['Right']);var c=s(a),d=c.path,e=c.sizes,f=c.zone,g=googletag.defineSlot(d,e,a);g.addService(b),!1}function v(b){var c=a.dfp&&a.dfp.targeting||{};'SystemDefault'===c.ProductVariant&&(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?c.ProductVariant='Dark':c.ProductVariant='Light'),Object.keys(c).forEach(function(a){b.setTargeting(a,c[a])})}function w(a){var g=a.map(b).filter(e);return{eligible:g.filter(f).filter(d),ineligible:g.filter(c)}}function x(b){void 0===b&&(b=r());var c=['dfp-mlb','dfp-smlb'];if(!o())return p(),void googletag.cmd.push(function(){return x(b)});var d=w(b),e=d.eligible,f=d.ineligible;if(e.forEach(function(a){g(a)}),f.forEach(h),0!==e.length){y.abd&&q(),googletag.destroySlots();var i=googletag.pubads();y.sf&&(i.setForceSafeFrame(!0),i.setSafeFrameConfig({allowOverlayExpansion:!0,allowPushExpansion:!0,sandbox:!0})),y.ll||i.enableSingleRequest(),a.sreEvent||(i.addEventListener('slotRenderEnded',t),a.sreEvent=!0),v(i);var j=e.filter(function(a){return!y.ll||0>c.indexOf(a.id)}),k=e.filter(function(a){return!!y.ll&&0<=c.indexOf(a.id)});j.forEach(function(a){u(a.id,i),a.setAttribute('data-dfp-zone','true')}),googletag.enableServices(),j.forEach(function(a){googletag.display(a.id)}),y.ll&&(i.enableLazyLoad({fetchMarginPercent:0,renderMarginPercent:0}),k.forEach(function(a){u(a.id,i),a.setAttribute('data-clc-prefilled','true')}),k.forEach(function(a){googletag.display(a.id)}))}}var y=function(a){for(var b=[],c=1;c<arguments.length;c++)b[c-1]=arguments[c];for(var d,e=0,f=b;e<f.length;e++)for(var g in d=f[e],d)a[g]=d[g];return a}({"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=d7c7e62bd2f5","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=83419f27e8fa","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false,"dh":[5171832659],"abd":true},a.options||{}),z=j(function(){var a=y.lib;n()&&(a=a.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2')),k(a)}),A=a.cmd||[];Array.isArray(A)&&(0<A.length?z():m(A,z));var B=j(function(){k('https://www.googletagservices.com/tag/js/gpt.js')}),C='248424177',D=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':/^\/$/.test(location.pathname)||/^\/home/.test(location.pathname)?'home-page':'question-pages',E=location.hostname;var F={slots:{lb:[[728,90]],mlb:[[728,90]],smlb:[[728,90]],bmlb:[[728,90]],sb:function(a){return'dfp-tsb'===a?[[300,250],[300,600]]:[[300,250]]},"tag-sponsorship":[[730,135]],"mobile-below-question":[[320,50],[300,250]],msb:[[300,250],[300,600]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-smlb":'smlb',"dfp-bmlb":'bmlb',"dfp-tsb":'sb',"dfp-isb":'sb',"dfp-tag":'tag-sponsorship',"dfp-msb":'msb',"dfp-m-aq":'mobile-below-question',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}},G=function(a){new Image().src='https://'+y.h+'/stalled.gif?'+a};(function(){var b=y.al;b&&A.push(function(){return a.load()})})(),p(),a.dfp={load:x},a.options=y,a.cmd=A})(this.clc=this.clc||{})}catch(a){window.console.error(a)}</script>    <script>
+        var clc = clc || {};
+        clc.collapse = { sb: !0, 'tag-sponsorship': !0, lb: !0, mlb: !0, smlb: !0, bmlb: !0, 'mobile-below-question': !0 };
+        clc.options = clc.options || {};
+        clc.options.sf = !0;
+        clc.options.hb = !1;
+        clc.options.ll = !0;
+        clc.dfp = clc.dfp || {};
+        clc.dfp.targeting = {Registered:['true'],'so-tag':['r','rstudio','nearest-neighbor','propensity-score-matching'],'tag-reportable':['r','rstudio','nearest-neighbor','propensity-score-matching'],'tag-non-reportable':['r','rstudio','nearest-neighbor','propensity-score-matching'],NumberOfAnswers:['0'],'ProductVariant':['Light']};
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function () { clc.dfp.load(); });
+
+            StackExchange.ready(function () { googletag.cmd.push(function () { StackExchange.ads.init(googletag, '/ads/report-ad', 'Report this ad') }) });
+    </script>
+
+                <footer class="footer">
+                    <nav class="links">
+                                <a href="https://meta.stackoverflow.com">meta</a>
+                                <a href="https://chat.stackoverflow.com">chat</a>
+                                <a href="/tour">tour</a>
+                            <a href="/help">help</a>
+                            <a href="https://stackoverflow.blog">blog</a>
+                            <a href="https://stackoverflow.com/legal/privacy-policy">privacy policy</a>
+                            <a href="https://stackoverflow.com/legal">legal</a>
+                            <a href="/contact">contact us</a>
+                        <a onclick=' StackExchange.switchMobile("off") '>full site</a>
+                        
+                    </nav>
+                        <p class="copyrights">
+                            2020 Stack Exchange, Inc. user contributions under <a href="https://stackoverflow.com/help/licensing">cc by-sa</a>
+                        </p>
+
+                </footer>
+                
+                <div class="overlay-bg js-overlay-bg"></div>
+
+                <div id="footer" class="hidden"></div>
+
+                        <script>
+(function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: [
+                        'UA-108242619-1'
+                    ],
+                        checkDimension: 'dimension42'
+                });
+
+                    StackExchange.ga.setDimension('dimension1', '15309092');
+
+
+                    StackExchange.ga.setDimension('dimension2', '|r|rstudio|nearest-neighbor|propensity-score-matching|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+
+                StackExchange.ga.trackPageView();
+            });
+            /**/
+
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+ qc.async = true;
+                    qc.src = 'https://secure.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });/**/
+ var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = 'https://sb.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });            })();
+                </script>
+
+    
+            </body>
+</html>
